@@ -11,7 +11,12 @@ export default function Home() {
 				<div className="row">
 					<div id="img-start" className="div col-lg-6">
 						<div>
-							<Image src="/logo.svg" width="350" height="350" />
+							<Image
+								src="/logo.svg"
+								width="350"
+								height="350"
+								alt="logo"
+							/>
 						</div>
 						<div id="d-subtitle">
 							SM t'ajuda a comunicar-te i compartir les teves
