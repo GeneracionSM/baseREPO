@@ -1,15 +1,11 @@
 {
-    "scripts": {
-        "install-all": "cd web_gen_sm && npm install",
-
-        "front:dev": "cd web_gen_sm && npm run dev",
-        "front:build": "cd web_gen_sm && npm run build",
-        "front:start": "cd web_gen_sm && npm run start",
-        "front:lint": "cd web_gen_sm && npm run lint",
-
-        "dev": "npm run front:dev",
-        "build": "npm run front:dev",
-        "start": "npm run front:dev",
-        "lint": "npm run front:lint"
+    "version": "0.1.0",
+    "private": true,
+    "workspaces": [
+        "web_gen_sm"
+    ],
+    "devDependencies": {
+        "eslint": "8.12.0",
+        "eslint-config-next": "12.1.4"
     }
 }
