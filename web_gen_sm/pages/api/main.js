@@ -1,55 +1,62 @@
-function createUser() {
+export async function createUser() {
 
 }
 
-function autenticateUser() {
+export async function autenticateUser() {
 
 }
 
-function emotionLogin() {
+export async function emotionLogin() {
 
 }
 
-function emotionLogout() {
+export async function emotionLogout() {
 
 }
 
-function getEmotions() {
+export async function getEmotions() {
 
 }
 
-function getMotivationalPhrase() {
+export async function getMotivationalPhrase() {
 
 }
 
-function getEvents() {
+export async function getEvents() {
 
 }
 
-function postReaction() {
+export async function postReaction() {
 
 }
 
-function getCalendarEvent() {
+export async function getCalendarEvent() {
 
 }
 
-function createCalendarEvent() {
+export async function createCalendarEvent() {
 
 }
 
-function createPost() {
+export async function createPost() {
 
 }
 
-function deletePost() {
+export async function deletePost() {
 
 }
 
-function getPhrase() {
+export async function getPhrase() {
 
 }
 
-function isAuthor() {
+export async function isAuthor(idUsuario, idPost) {
+
+    try {
+        const result:
+
+    } catch (error) {
+        console.log(error);
+    }
 
 }
