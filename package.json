@@ -2,7 +2,7 @@
     "version": "0.1.0",
     "private": true,
     "workspaces": [
-        "web_gen_sm"
+        "web"
     ],
     "devDependencies": {
         "eslint-config-next": "12.1.4",
