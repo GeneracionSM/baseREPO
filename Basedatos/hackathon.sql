@@ -150,6 +150,7 @@ CREATE TABLE `usuario` (
   `nombre` char(30) NOT NULL,
   `apellido_1` char(30) NOT NULL,
   `apellido_2` char(30) DEFAULT NULL,
+  `username` char(30) NOT NULL,
   `mail` varchar(50) NOT NULL,
   `password` char(30) NOT NULL,
   `admin` BOOLEAN NOT NULL DEFAULT FALSE,
