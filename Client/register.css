@@ -1,6 +1,22 @@
-h1 {
+#title{
+    text-align: center;
+    margin: 25px;
     justify-content: center;
     align-items: center;
+}
+
+h1 {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+}
+
+.padding{
+    margin-top: 5px;
+}
+
+.padding-2{
     margin-top: 10px;
 }
 
