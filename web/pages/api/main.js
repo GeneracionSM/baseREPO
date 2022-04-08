@@ -1,8 +1,6 @@
 // https://javascript.plainenglish.io/connect-mysql-and-authentication-on-next-js-761d12340e4f
 
-import crypto from "crypto";
-import { v4 as uuidv4 } from "uuid";
-import executeQuery from "db";
+import executeQuery from "../../../lib/db";
 import moment from "moment";
 
 export async function createUser(
@@ -105,13 +103,13 @@ export async function getEmotions() {
     }
 }
 
-export async function getEvents() {}
+export async function getEvents() { }
 
-export async function postReaction() {}
+export async function postReaction() { }
 
-export async function getCalendarEvent() {}
+export async function getCalendarEvent() { }
 
-export async function createCalendarEvent() {}
+export async function createCalendarEvent() { }
 
 export async function createPost(
     premium,
