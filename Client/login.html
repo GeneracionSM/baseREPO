@@ -2,34 +2,47 @@
 <html lang="es">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genaració SM</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <script src="web_gen_sm/pages/api/"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-lg-4">
-                <img src="./img/logo.png" width="30%">
+            <div id="img-start" class="div col-lg-6">
+                <div>
+                    <img src="./img/logo.png" width="75%">
+                </div> 
+                <div id="d-subtitle" >
+                    SM t'ajuda a comunicar-te i compartir les teves obres amb les persones que formen part del món de l'art.
+                </div>
+            </div>
 
-            </div>
-            <div class="col-lg-4">
-                SM te ayuda a comunicarte y compartir tus obras con las personas que forman parte del mundo del arte.
-            </div>
-            <div class="col-lg-3">
-                <div class="shadow-lg p-4 mb-5 bg-body rounded">
-                    <form method="post">
-                        <div class="d-grip gap-2">
-                            <input id="i-username" name="username" class="form-control" placeholder="Usuario" required>
-                            <input id="i-password" type="password" name="password" class="form-control" placeholder="Contraseña" required>
-                            <button id="b-login" type="submit" class="btn btn-primary">Iniciar Sesión</button>
-                            <a id="b-register" class="btn btn-outline-primary" href="#" role="button">Regístrate</a>
+            <div class="offset-lg-1 col-lg-4">
+                <div class="shadow-lg p-4 mb-5 bg-body rounded form">   
+                    <form name="f-login" method="post">
+                        <div id="form">
+                            <input id="i-username" name="username" class="form-control padding" placeholder="Usuari" required>
+                            <input id="i-password" type="password" name="password" class="form-control padding" placeholder="Contrassenya" required>
+                            <button id="b-login" type="submit" class="btn btn-secondary padding padding-2">Inicia Sessió</button>
+                            <a id="b-register" class="btn btn-outline-secondary padding padding-2" href="#" role="button">Regístra't</a>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
+    <footer>
+        <br>Alumnos de la Escuela Politécnica Superior - Universitat de les Illes Balears &copy
+    </footer>
+    
 </body>
+
+
+
+</html>

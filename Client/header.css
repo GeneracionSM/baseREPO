@@ -1,0 +1,39 @@
+.navbar{
+    background-image: linear-gradient(to right, #E5256E, #ba327a, #A7377F); 
+}
+
+.navbar a{
+    color: white;
+    font-family:  "Andale Mono";
+    font-weight: bold;
+}
+
+.navbar a:hover{
+    color: #e882a9;
+}
+#sidebar-nav {
+    width: 120%;
+    border: 1px solid gray !important;
+}
+
+.list-group-item {
+    border: 0px !important;
+    text-decoration: none !important;
+    color: black; 
+}
+
+.list-group-item:hover {
+    background-color: #ffe8f1;
+    font-weight: bolder;
+    color: black;
+}
+
+.mensajeSemanal{
+    margin: 2%;
+    font-weight: bold;
+    border-radius: 25px;
+    background-color: lightgray;
+    padding: 3%;
+    text-align: center;
+}
+

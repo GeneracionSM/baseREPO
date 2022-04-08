@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genaració SM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+        <section>
+            <div class="container-form">
+                <div class="row">
+                    <div class="col-lg-6 offset-lg-3">
+                        <div class="shadow-lg p-4 mb-5 bg-body rounded">
+                            <h1>Registro</h1>
+                            <form method="post">
+                                <div>
+                                    <label>Nombre <span style="color: red;">*</span>:</label>
+                                    <input name="name" class="form-control" placeholder="Nombre" required>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label class="padding">Primer apellido <span style="color: red;">*</span>:</label>
+                                            <input name="surname1" class="form-control" placeholder="Primer apellido" required>
+                                        </div> 
+                                        <div class="col-md-6">
+                                            <label class="padding">Segundo apellido:</label>
+                                            <input name="surname2" class="form-control" placeholder="Segundo apellido" >       
+                                        </div> 
+                                    </div>
+                                    <label class="padding">Fecha de nacimiento <span style="color: red;">*</span>:</label>
+                                    <input type="date" name="dateofbirth" class="form-control" min="1920-1-01" max="2023-12-31" required>
+                                    <label class="padding">Usuario <span style="color: red;">*</span>:</label>
+                                    <input name="username" class="form-control" placeholder="Usuario" required>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label class="padding">Contraseña <span style="color: red;">*</span>:</label>
+                                            <input type="password" name="password" class="form-control" placeholder="Contraseña" required>   
+                                        </div> 
+                                        <div class="col-md-6">
+                                            <label class="padding">Repite la contraseña <span style="color: red;">*</span>:</label>
+                                            <input type="password" name="password2" class="form-control" placeholder="Contraseña" required>    
+                                        </div>
+                                    </div>
+                                    <center><button type="submit" class="btn btn-secondary padding-2">Registrarse</button></center>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <footer>
+        <br>
+        Alumnos de la Escuela Politécnica Superior. Universitat de les Illes Balears &copy;
+    </footer>
+    
+</body>
+</html>
