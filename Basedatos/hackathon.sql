@@ -80,7 +80,7 @@ CREATE TABLE `post` (
   `fechapost` datetime DEFAULT NULL,
   `idUsuario` int(11) DEFAULT NULL,
   `idEmocion` int(11) DEFAULT NULL,
-  `path_img` varchar(100) NOT NULL,
+  `path_img` varchar(300) NOT NULL,
   `descripcion` varchar(300) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
