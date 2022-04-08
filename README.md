@@ -1,5 +1,5 @@
 https://discord.gg/WvHzkRn9
-https://prod.liveshare.vsengsaas.visualstudio.com/join?203DEAE203C7BD5CD0DC26ED0E7866170498
+
 
 
 # OBJECTIU
