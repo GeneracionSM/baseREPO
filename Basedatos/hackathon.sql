@@ -152,6 +152,7 @@ CREATE TABLE `usuario` (
   `apellido_2` char(30) DEFAULT NULL,
   `mail` varchar(50) NOT NULL,
   `password` char(30) NOT NULL,
+  `admin` BOOLEAN NOT NULL DEFAULT FALSE,
   `path_pic` varchar(100) DEFAULT NULL,
   `fecha_nacim` date NOT NULL,
   `saldo` int(11) NOT NULL DEFAULT 20,
