@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `emocion` (
-  `idEmocion` int(11) NOT NULL,
+  `idEmocion` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(20) DEFAULT NULL,
   `imagen` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -37,9 +37,18 @@ CREATE TABLE `emocion` (
 -- Volcado de datos para la tabla `emocion`
 --
 
-INSERT INTO `emocion` (`idEmocion`, `nombre`, `imagen`) VALUES
-(1, 'content', './Emojis/content.png'),
-(2, 'emocionat', './Emojis/emocionat.png');
+INSERT INTO `emocion` (`nombre`, `imagen`) VALUES
+('Content', './Emojis/content.svg'),
+('Trist', './Emojis/trist.svg'),
+('Sorprès', './Emojis/sorpres.svg'),
+('Enfadat', './Emojis/enfadat.svg'),
+('Nerviós', './Emojis/nervios.svg'),
+('Enrabiat', './Emojis/enrabiat.svg'),
+('Eufòric', './Emojis/euforic.svg'),
+('Emocionat', './Emojis/emocionat.svg'),
+('Melancòlic', './Emojis/melancolid.svg'),
+('Il·lusionat', './Emojis/ilusionat.svg'),
+;
 
 -- --------------------------------------------------------
 
@@ -212,12 +221,6 @@ ALTER TABLE `usuario`
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
-
---
--- AUTO_INCREMENT de la tabla `emocion`
---
-ALTER TABLE `emocion`
-  MODIFY `idEmocion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `frase`
