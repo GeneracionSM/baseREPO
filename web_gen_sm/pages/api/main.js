@@ -2,7 +2,7 @@
 
 import crypto from 'crypto';
 import { v4 as uuidv4 } from 'uuid';
-import excuteQuery from 'db.js';
+import excuteQuery from 'db';
 import moment from 'moment';
 
 export async function createUser(nombre, apellido_uno, apellido_dos, fecha_nacimiento,
