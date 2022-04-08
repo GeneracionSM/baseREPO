@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-04-2022 a las 13:46:43
+-- Tiempo de generación: 08-04-2022 a las 16:34:56
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -33,6 +33,14 @@ CREATE TABLE `emocion` (
   `imagen` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `emocion`
+--
+
+INSERT INTO `emocion` (`idEmocion`, `nombre`, `imagen`) VALUES
+(1, 'content', './Emojis/content.png'),
+(2, 'emocionat', './Emojis/emocionat.png');
+
 -- --------------------------------------------------------
 
 --
@@ -43,6 +51,13 @@ CREATE TABLE `frase` (
   `idFrase` int(11) NOT NULL,
   `frase` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `frase`
+--
+
+INSERT INTO `frase` (`idFrase`, `frase`) VALUES
+(1, 'No es que no sepas programar, es que te falta RAM');
 
 -- --------------------------------------------------------
 
@@ -60,6 +75,15 @@ CREATE TABLE `post` (
   `descripcion` varchar(300) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `post`
+--
+
+INSERT INTO `post` (`idPost`, `premium`, `fechapost`, `idUsuario`, `idEmocion`, `path_img`, `descripcion`) VALUES
+(1, 0, '2022-04-08 16:24:38', 1, 1, 'https://global-uploads.webflow.com/5f5a53e153805db840dae2db/6073fbf151fa4565d48572dc_GitHub_aprender', 'Logo github porque me inspira mucho'),
+(2, 1, '2022-04-08 16:27:33', 1, 1, 'https://res.cloudinary.com/practicaldev/image/fetch/s--sWV8Y0kc--/c_imagga_scale,f_auto,fl_progressi', 'Este post es premium'),
+(3, 0, '2022-04-08 16:29:38', 1, 1, 'https://logo.uib.cat/digitalAssets/338/338690_logo-uib-horizontal300.png', 'Logo uib');
+
 -- --------------------------------------------------------
 
 --
@@ -71,6 +95,13 @@ CREATE TABLE `reaccion` (
   `idUsuario` int(11) NOT NULL,
   `idEmocion` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `reaccion`
+--
+
+INSERT INTO `reaccion` (`idPost`, `idUsuario`, `idEmocion`) VALUES
+(2, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -114,8 +145,16 @@ CREATE TABLE `usuario` (
   `password` char(30) NOT NULL,
   `path_pic` varchar(100) DEFAULT NULL,
   `fecha_nacim` date NOT NULL,
-  `saldo` int(11) NOT NULL DEFAULT 20
+  `saldo` int(11) NOT NULL DEFAULT 20,
+  `biografia` varchar(240) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`idUsuario`, `nombre`, `apellido_1`, `apellido_2`, `mail`, `password`, `path_pic`, `fecha_nacim`, `saldo`, `biografia`) VALUES
+(1, 'Adefesio', 'Javier', 'Vazquez', 'adefesio.javier@gmail.com', 'passadefesio', NULL, '2013-04-09', 20, 'Esto es una pureba');
 
 --
 -- Índices para tablas volcadas
@@ -178,19 +217,19 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `emocion`
 --
 ALTER TABLE `emocion`
-  MODIFY `idEmocion` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idEmocion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `frase`
 --
 ALTER TABLE `frase`
-  MODIFY `idFrase` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idFrase` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `post`
 --
 ALTER TABLE `post`
-  MODIFY `idPost` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idPost` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `registroemocion`
@@ -208,7 +247,7 @@ ALTER TABLE `sesion`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restricciones para tablas volcadas
