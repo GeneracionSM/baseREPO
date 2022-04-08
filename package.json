@@ -2,10 +2,10 @@
     "scripts": {
         "install-all": "cd web_gen_sm && npm install",
 
-        "front:dev": "cd web_gen_sm && next dev",
-        "front:build": "next build",
-        "front:start": "next start",
-        "front:lint": "next lint",
+        "front:dev": "cd web_gen_sm && npm run dev",
+        "front:build": "cd web_gen_sm && npm run build",
+        "front:start": "cd web_gen_sm && npm run start",
+        "front:lint": "cd web_gen_sm && npm run lint",
 
         "dev": "npm run front:dev",
         "build": "npm run front:dev",
