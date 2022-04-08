@@ -1,3 +1,6 @@
+https://discord.gg/WvHzkRn9
+
+
 # OBJECTIU
 Crear una xarxa social on es pugui compartir i vincular la salut mental i les emocions amb la seva expressió en forma d’art.
 Els destinataris són joves a partir de 12 anys (xarxa social segura).
