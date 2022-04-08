@@ -7,21 +7,19 @@ import moment from 'moment';
 
 export async function createUser(nombre, apellido_uno, apellido_dos, fecha_nacimiento,
     alias, correo, password) {
-    const salt = crypto.randomBytes(16).toString('hex');
-    const hash = crypto
-        .pbkdf2Sync(password, salt, 1000, 64, 'sha512')
-        .toString('hex');
     const user = {
-        id: uuidv4(),
-        createdAt: moment().format('YYYY-MM-DD HH:mm:ss'),
-        email,
-        hash,
-        salt,
+        name: nombre,
+        ap_uno: apellido_uno,
+        ap_dos: apellido_dos,
+        fc_nc: fecha_nacimiento,
+        al: alias,
+        email: correo,
+        pass: password,
     };
     try {
         const result = await excuteQuery({
             query: 'INSERT INTO usuario (nombre,apellido_1,apellido_2,mail,password,fecha_nacim,username) VALUES (?,?,?,?,?,?,?)',
-            values: [user.id, user.createdAt.toString(), user.email, user.hash, user.salt],
+            values: [user.name, user.ap_uno, user.ap_dos, user.email, user.pass, user.fc_nc, user.al],
         });
         console.log(result);
     } catch (error) {
@@ -31,16 +29,46 @@ export async function createUser(nombre, apellido_uno, apellido_dos, fecha_nacim
     return user;
 }
 
-export async function autenticateUser() {
+export async function autenticateUser(mail, password) {
+    try {
+        const result = await excuteQuery({
+            query: 'SELECT idUsuario FROM usuario WHERE mail = ? AND password = ?',
+            values: [mail, password],
+        });
+
+        console.log(result);
+        return user;
+    } catch (error) {
+        console.log(error);
+    }
+
 
 }
 
-export async function emotionLogin() {
-
+export async function emotionLogin(idUsuario, idEmocion) {
+    try {
+        const result = await excuteQuery({
+            query: 'INSERT INTO registroemocion (idUsuario, idEmocion, data) VALUES (?,?,?)',
+            values: [idUsuario, idEmocion, '', moment().format('YYYY-MM-DD HH:mm:ss')],
+        });
+        console.log(result);
+        return result;
+    } catch (error) {
+        console.log(error);
+    }
 }
 
-export async function emotionLogout() {
-
+export async function emotionLogout(idUsuario, idEmocion) {
+    try {
+        const result = await excuteQuery({
+            query: 'INSERT INTO registroemocion (idUsuario, idEmocion, data) VALUES (?,?,?)',
+            values: [idUsuario, idEmocion, '', moment().format('YYYY-MM-DD HH:mm:ss')],
+        });
+        console.log(result);
+        return result;
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 export async function getEmotions() {
@@ -88,7 +116,18 @@ export async function createPost(premium, fechapost, idUsuario, idEmocion, path_
 
 }
 
-export async function deletePost() {
+export async function deletePost(idUsuario, idPost) {
+
+    try {
+        const result = await excuteQuery({
+            query: 'DELETE FROM post WHERE idUsuario = ? AND idPost = ?',
+            values: [idUsuario, idPost],
+        });
+        console.log(result);
+        return result;
+    } catch (error) {
+        console.log(error);
+    }
 
 }
 
@@ -122,4 +161,11 @@ export async function isAuthor(idUsuario, idPost) {
         console.log(error);
     }
 
+}
+
+export async function loadFeed(emotion){
+    // preguntar mañana como se tiene que organizar las emociones y que tiene que salir
+    // y como se tiene que hacer el display en el feed
+    // si solo visualizamos cosas buenas, no se enseñarán cosas malas y si estas bien
+    // que tiene que salir??
 }
