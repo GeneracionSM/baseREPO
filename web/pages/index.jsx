@@ -3,9 +3,12 @@ import Image from "next/image";
 import React from 'react';
 import Footer from '../components/footer';
 import Inicio from '../components/inicio';
+import { useState } from "react";
 
 
 export default function Login() {
+    const [login, setLogin] = useState(true);
+
     return (
         <>
             <Head>
@@ -28,6 +31,8 @@ export default function Login() {
                             l'art.
                         </div>
                     </div>
+                    
+                    {login ? <Inicio onRegisterClick={() => setLogin(false)} /> : <p>register</p>} 
                 </div>
             </div>
 

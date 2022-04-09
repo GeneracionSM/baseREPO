@@ -1,20 +1,18 @@
 import React from 'react';
-import executeQuery from "../../../lib/db";
-import moment from "moment";
 
-const Inicio = () => (
-    <div className="offset-lg-1 col-lg-4 form">
+const Inicio = ({onRegisterClick}) => (
+<div className="offset-lg-1 col-lg-4 form">
     <div className="shadow-lg p-4 mb-5 bg-body rounded">
         <form name="f-login" method="post">
             <div id="form">
-                <label for="username">Usuari:</label>
+                <label htmlFor="username">Usuari:</label>
                 <input
                     id="i-username"
                     name="username"
                     className="form-control padding"
                     required
                 />
-                <label for="password">Contrassenya:</label>
+                <label htmlFor="password">Contrassenya:</label>
                 <input
                     id="i-password"
                     type="password"
@@ -30,14 +28,16 @@ const Inicio = () => (
                     Inicia sessió
                 </button>
                 &nbsp;
-                <a
+                <button 
+                    type="button"
                     id="b-register"
                     className="my-outline-btn btn btn-outline-secondary padding padding-2"
                     href="#"
                     role="button"
+                    onClick={onRegisterClick}
                 >
                     Registra't
-                </a>
+                </button>
             </div>
         </form>
     </div>
