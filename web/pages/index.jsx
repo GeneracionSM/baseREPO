@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 
-export default function Home() {
+export default function Login() {
     return (
         <>
             <Head>
@@ -68,11 +68,11 @@ export default function Home() {
             </div>
 
             <footer>
-            <div className="row">
-                <div className="col-8 offset-2 padding-3" style="margin-top: 25px;">
-                    Alumnes de la Escola Politècnica Superior - Universitat de les Illes Balears &copy 2022
+                <div className="row">
+                    <div className="col-8 offset-2 padding-3" style="margin-top: 25px;">
+                        Alumnes de la Escola Politècnica Superior - Universitat de les Illes Balears &copy 2022
+                    </div>
                 </div>
-            </div>
             </footer>
         </>
     );
