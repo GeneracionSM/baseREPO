@@ -95,11 +95,13 @@ export async function emotionLogout(idUsuario, idEmocion) {
 export async function getEmotions() {
     try {
         const result = await executeQuery({
-            query: "SELECT imagen FROM emocion",
+            query: "SELECT * FROM emocion",
             values: []
         });
+        console.log("E"+result);
+        return result;
     } catch (error) {
-        console.log(error);
+        console.log("A"+error);
     }
 }
 
