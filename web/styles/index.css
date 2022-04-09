@@ -13,21 +13,29 @@
     }
 
     #img-logo{
-        width: 40%;
+        width: 300px;
+        height: 300px;
     }
 
-    .form{
-        margin-top: 0;
+    .container-form{
+        padding-top:0%;
     }
 
     .form{
         position: relative;
-        top: 10px;
+        top: -50px;
     }
+}
+
+label{
+    display: block;
+    text-align: left;
 }
 
 #img-start{
     top: -50px;
+    text-align: center;
+    margin-bottom: 15px;
 }
 
 .form{

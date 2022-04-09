@@ -1,5 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
+import React from 'react';
+import Footer from '../components/footer';
+
 
 export default function Home() {
     return (
@@ -68,14 +71,10 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-
             <footer>
-            <div className="row">
-                <div className="col-8 offset-2 padding-3">
-                    Alumnes de la Escola Politècnica Superior - Universitat de les Illes Balears &copy 2022
-                </div>
-            </div>
+            <Footer></Footer>
             </footer>
+            
         </>
     );
 }
