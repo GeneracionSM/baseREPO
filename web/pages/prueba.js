@@ -1,5 +1,4 @@
 import sql_query from "../../lib/db";
-import getEmotions from "./api/main";
 
 export default function hackathon(props) {
     const { posts } = props;
