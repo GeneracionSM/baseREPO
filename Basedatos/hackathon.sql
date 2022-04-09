@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `emocion` (
-  `idEmocion` int(11) NOT NULL AUTO_INCREMENT,
+  `idEmocion` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `nombre` varchar(20) DEFAULT NULL,
   `imagen` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -47,7 +47,7 @@ INSERT INTO `emocion` (`nombre`, `imagen`) VALUES
 ('Eufòric', './Emojis/euforic.svg'),
 ('Emocionat', './Emojis/emocionat.svg'),
 ('Melancòlic', './Emojis/melancolid.svg'),
-('Il·lusionat', './Emojis/ilusionat.svg'),
+('Il·lusionat', './Emojis/ilusionat.svg')
 ;
 
 -- --------------------------------------------------------
@@ -170,12 +170,6 @@ INSERT INTO `usuario` (`idUsuario`, `nombre`, `apellido_1`, `apellido_2`, `mail`
 --
 -- Índices para tablas volcadas
 --
-
---
--- Indices de la tabla `emocion`
---
-ALTER TABLE `emocion`
-  ADD PRIMARY KEY (`idEmocion`);
 
 --
 -- Indices de la tabla `frase`
