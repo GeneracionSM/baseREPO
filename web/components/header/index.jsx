@@ -1,16 +1,14 @@
 import React from 'react';
+import './Header.scss';
 
 
 const Header = () => (
-	<div className="header">
-		<div className="headerContent">
-			<div>
-			</div>
-			<div className="menuItems">
+	<nav class="navbar">
+	<a class="navbar-brand" href="#">Nombre de la Aplicación</a>
 
-			</div>
-		</div>
-	</div>
+	<a href="#" class="d-block link-dark text-decoration-none" id="dropdownUser1"  aria-expanded="false">
+	</a>
+</nav>
 );
 
 export default Header;

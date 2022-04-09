@@ -13,6 +13,10 @@
         "fs": "^0.0.1-security",
         "moment": "^2.29.2",
         "net": "^1.0.2",
+        "next": "^12.1.4",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0",
+        "sass": "^1.50.0",
         "serverless-mysql": "^1.5.4",
         "sweetalert2": "^11.4.8",
         "tls": "^0.0.1"

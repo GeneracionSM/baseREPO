@@ -1,6 +1,39 @@
+import Swal from 'sweetalert2/dist/sweetalert2.js'
 
+
+
+
+function llamarAlerta(){
+        (async () => {
+    
+            const { value: file } = await Swal.fire({
+              title: 'Publicar contingut',
+              input: 'file',
+              inputAttributes: {
+                // 'accept': 'image/*',
+                'aria-label': 'Publica el teu art'
+              }
+            })
+            
+            if (file) {
+              const reader = new FileReader()
+              reader.onload = (e) => {
+                Swal.fire({
+                  title: 'Your uploaded picture',
+                  imageUrl: e.target.result,
+                  imageAlt: 'The uploaded picture'
+                })
+              }
+              reader.readAsDataURL(file)
+            }
+            
+            })()
+    }
 
 export default function muro() {
+
+    
+    
     return (
         <>
 
@@ -40,6 +73,7 @@ export default function muro() {
                                         id="b-login"
                                         type="submit"
                                         className="my-btn btn btn-secondary padding padding-2"
+                                        onClick={()=>llamarAlerta()}
                                     >
                                         Inicia sessió
                                     </button>
