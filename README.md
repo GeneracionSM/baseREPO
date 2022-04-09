@@ -40,3 +40,18 @@ Per a accedir a continguts “Premium” s’utilitzaria  una mena de  “banc d
 # ALTRES REQUISITS NO FUNCIONALS
 Idioma. Català. S’utilitza un llenguatge col·loquial i modern, incloent anglicismes i argot juvenil, per tal de connectar amb el públic objectiu.
 Disseny. Té una estètica relacionada amb l’art (per exemple les notificacions apareixen sobre una taca de pintura que s’escampa sobre la interfície).
+
+# DEV
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Getting Started
+
+First, run the development server:
+
+```bash
+npm run dev 
+# or 
+np run dev -ws # in root
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
