@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
 const Inicio = ({onRegisterClick}) => (
-<div className="offset-lg-1 col-lg-4 form">
+<div className="my-form offset-lg-1 col-lg-4">
     <div className="shadow-lg p-4 mb-5 bg-body rounded">
         <form name="f-login" method="post">
             <div id="form">

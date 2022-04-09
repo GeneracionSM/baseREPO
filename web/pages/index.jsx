@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from 'react';
 import Footer from '../components/footer';
 import Inicio from '../components/inicio';
+import Registro from "../components/registro";
 import { useState } from "react";
 
 
@@ -32,7 +33,7 @@ export default function Login() {
                         </div>
                     </div>
                     
-                    {login ? <Inicio onRegisterClick={() => setLogin(false)} /> : <p>register</p>} 
+                    {login ? <Inicio onRegisterClick={() => setLogin(false)} /> : <Registro /> } 
                 </div>
             </div>
 
