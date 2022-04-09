@@ -13,8 +13,8 @@ export default function Home() {
                         <div>
                             <Image
                                 src="/logo.svg"
-                                width="350"
-                                height="350"
+                                width="750"
+                                height="750"
                                 alt="logo"
                             />
                         </div>
@@ -47,13 +47,14 @@ export default function Home() {
                                     <button
                                         id="b-login"
                                         type="submit"
-                                        className="btn btn-secondary padding padding-2"
+                                        className="my-btn btn btn-secondary padding padding-2"
                                     >
                                         Inicia Sessió
                                     </button>
+                                    &nbsp;
                                     <a
                                         id="b-register"
-                                        className="btn btn-outline-secondary padding padding-2"
+                                        className="my-outline-btn btn btn-outline-secondary padding padding-2"
                                         href="#"
                                         role="button"
                                     >
@@ -67,9 +68,11 @@ export default function Home() {
             </div>
 
             <footer>
-                <br />
-                Alumnos de la Escuela Politécnica Superior - Universitat de les
-                Illes Balears &copy
+            <div className="row">
+                <div className="col-8 offset-2 padding-3" style="margin-top: 25px;">
+                    Alumnes de la Escola Politècnica Superior - Universitat de les Illes Balears &copy 2022
+                </div>
+            </div>
             </footer>
         </>
     );
