@@ -1,3 +1,4 @@
+https://prod.liveshare.vsengsaas.visualstudio.com/join?A9BA8F7BA128BD7C13B8E3F7F48A5C62DCCC
 # OBJECTIU
 Crear una xarxa social on es pugui compartir i vincular la salut mental i les emocions amb la seva expressió en forma d’art.
 Els destinataris són joves a partir de 12 anys (xarxa social segura).
