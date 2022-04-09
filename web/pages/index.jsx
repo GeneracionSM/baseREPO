@@ -4,7 +4,7 @@ import React from 'react';
 import Footer from '../components/footer';
 
 
-export default function Home() {
+export default function Login() {
     return (
         <>
             <Head>
