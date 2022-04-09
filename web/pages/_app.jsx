@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../styles/style.css";
+import "../styles/index.css";
 import "../styles/header.css";
 import "../styles/register.css";
 

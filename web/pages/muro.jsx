@@ -1,22 +1,14 @@
-import Head from "next/head";
-import Image from "next/image";
 
-export default function Home() {
+
+export default function muro() {
     return (
         <>
-            <Head>
-                <title>Genaració SM</title>
-            </Head>
+
             <div className="container">
                 <div className="row">
                     <div id="img-start" className="div col-lg-6">
                         <div>
-                            <Image
-                                src="/logo.svg"
-                                width="550"
-                                height="550"
-                                alt="logo"
-                            />
+
                         </div>
                         <div id="d-subtitle">
                             SM t'ajuda a comunicar-te i compartir les teves
@@ -25,11 +17,10 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="offset-lg-1 col-lg-4 form">
-                        <div className="shadow-lg p-4 mb-5 bg-body rounded">
+                    <div className="offset-lg-1 col-lg-4">
+                        <div className="shadow-lg p-4 mb-5 bg-body rounded form">
                             <form name="f-login" method="post">
                                 <div id="form">
-                                    <label for="username">Usuari:</label>
                                     <input
                                         id="i-username"
                                         name="username"
@@ -37,7 +28,6 @@ export default function Home() {
                                         placeholder="Usuari"
                                         required
                                     />
-                                    <label for="password">Contrassenya:</label>
                                     <input
                                         id="i-password"
                                         type="password"

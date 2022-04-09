@@ -1,5 +1,5 @@
 .container{
-    padding-top: 15%;
+    padding-top: 5%;
 }
 
 .container-form{
@@ -17,13 +17,22 @@
     }
 
     .form{
+        margin-top: 0;
+    }
+
+    .form{
         position: relative;
         top: 10px;
     }
 }
 
+#img-start{
+    top: -50px;
+}
+
 .form{
     text-align: center;
+    margin-top: 18%;
 }
 
 #d-subtitle{
@@ -73,6 +82,10 @@ body{
 
 .padding-2{
     margin-top: 10px;
+}
+
+.padding-3{
+    margin-top: 20px;
 }
 
 footer{
