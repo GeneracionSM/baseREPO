@@ -1,9 +1,8 @@
-import executeQuery from "../../lib/db";
-import getEmotions from "./api/main";
+import sql_query from "../../lib/db";
 
 export default function hackathon(props) {
     const { posts } = props;
-    console.log("D "+posts);
+    console.log(posts);
     if (!posts) return <p>Something went wrong....</p>
     return <div>
         <h1>Welcome to the blog page.....</h1>
@@ -23,18 +22,19 @@ export default function hackathon(props) {
 
 export async function getStaticProps(context) {
     // fecth endpoint
-    console.log("holw");
     try {
-         const result = await executeQuery({
-            query: "SELECT * FROM `emocion`",
-            values: []
-        });
-        console.log("B"+result);
+        const result = await sql_query(
+        `
+          SELECT * FROM emocion
+        `
+        );
         let posts = JSON.parse(JSON.stringify(result));
+        console.log(posts);
         return {
             props: { posts } // will be passed to our blog page component as props
         };
     } catch (e) {
+        console.log(e)
         return { props: { posts: false } }
     }
 }
