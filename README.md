@@ -52,7 +52,7 @@ First, run the development server:
 ```bash
 npm run dev 
 # or 
-np run dev -ws # in root
+npm run dev -ws # in root
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
