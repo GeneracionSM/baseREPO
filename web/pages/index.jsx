@@ -2,8 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import React from 'react';
 import Footer from '../components/footer';
-import Inicio from '../components/inicio';
-import Registro from "../components/registro";
+import Login from '../components/login';
+import Register from "../components/register";
 import { useState } from "react";
 
 
@@ -33,7 +33,7 @@ export default function Login() {
                         </div>
                     </div>
                     
-                    {login ? <Inicio onRegisterClick={() => setLogin(false)} /> : <Registro /> } 
+                    {login ? <Login onRegisterClick={() => setLogin(false)} /> : <Register /> } 
                 </div>
             </div>
 
