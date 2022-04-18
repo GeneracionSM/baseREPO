@@ -1,17 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
-import React from 'react';
-import Footer from '../components/footer';
-import Login from '../components/login';
-import Register from "../components/register";
-import { useState } from "react";
+import { React, useState } from "react";
 
-
-export default function Login() {
+export function Login() {
     const [login, setLogin] = useState(true);
 
     return (
-        <>
+        <div>
             <Head>
                 <title>Genaració SM</title>
             </Head>
@@ -39,6 +34,6 @@ export default function Login() {
 
             <Footer />
            
-        </>
+        </div>
     );
 }
