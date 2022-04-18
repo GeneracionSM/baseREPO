@@ -1,12 +1,14 @@
 import Head from "next/head";
 import Image from "next/image";
 import { React, useState } from "react";
+import { Footer } from "../components/Footer";
+import { Login } from "../components/Login";
 
-export function Login() {
+export default function Index() {
     const [login, setLogin] = useState(true);
 
     return (
-        <div>
+        <>
             <Head>
                 <title>Genaració SM</title>
             </Head>
@@ -34,6 +36,6 @@ export function Login() {
 
             <Footer />
            
-        </div>
+        </>
     );
 }
