@@ -1,15 +1,17 @@
 // https://javascript.plainenglish.io/connect-mysql-and-authentication-on-next-js-761d12340e4f
 
-
-
-
-
 //Hay que hacer un fichero de endpoint para cada querry
 import executeQuery from "../../../lib/db";
 
-
-export async function createUser(nombre, apellido_uno, apellido_dos, fecha_nacimiento, alias, correo, password) {
-
+export async function createUser(
+    nombre,
+    apellido_uno,
+    apellido_dos,
+    fecha_nacimiento,
+    alias,
+    correo,
+    password
+) {
     const user = {
         name: nombre,
         ap_uno: apellido_uno,
@@ -17,12 +19,20 @@ export async function createUser(nombre, apellido_uno, apellido_dos, fecha_nacim
         fc_nc: fecha_nacimiento,
         al: alias,
         email: correo,
-        pass: password,
+        pass: password
     };
     try {
         const result = await excuteQuery({
-            query: 'INSERT INTO usuario (nombre,apellido_1,apellido_2,mail,password,fecha_nacim,username) VALUES (?,?,?,?,?,?,?)',
-            values: [user.name, user.ap_uno, user.ap_dos, user.email, user.pass, user.fc_nc, user.al],
+            query: "INSERT INTO usuario (nombre,apellido_1,apellido_2,mail,password,fecha_nacim,username) VALUES (?,?,?,?,?,?,?)",
+            values: [
+                user.name,
+                user.ap_uno,
+                user.ap_dos,
+                user.email,
+                user.pass,
+                user.fc_nc,
+                user.al
+            ]
         });
         console.log(result);
     } catch (error) {
@@ -33,8 +43,13 @@ export async function createUser(nombre, apellido_uno, apellido_dos, fecha_nacim
 export async function emotionLogin(idUsuario, idEmocion) {
     try {
         const result = await excuteQuery({
-            query: 'INSERT INTO registroemocion (idUsuario, idEmocion, data) VALUES (?,?,?)',
-            values: [idUsuario, idEmocion, '', moment().format('YYYY-MM-DD HH:mm:ss')],
+            query: "INSERT INTO registroemocion (idUsuario, idEmocion, data) VALUES (?,?,?)",
+            values: [
+                idUsuario,
+                idEmocion,
+                "",
+                moment().format("YYYY-MM-DD HH:mm:ss")
+            ]
         });
         console.log(result);
         return result;
@@ -46,8 +61,12 @@ export async function emotionLogin(idUsuario, idEmocion) {
 export async function emotionLogout(idUsuario, idEmocion) {
     try {
         const result = await excuteQuery({
-            query: 'INSERT INTO registroemocion (idUsuario, idEmocion, data) VALUES (?,?,?)',
-            values: [idUsuario, idEmocion, moment().format('YYYY-MM-DD HH:mm:ss')],
+            query: "INSERT INTO registroemocion (idUsuario, idEmocion, data) VALUES (?,?,?)",
+            values: [
+                idUsuario,
+                idEmocion,
+                moment().format("YYYY-MM-DD HH:mm:ss")
+            ]
         });
         console.log(result);
         return result;
@@ -59,12 +78,12 @@ export async function emotionLogout(idUsuario, idEmocion) {
 export async function validateUser(correo, password) {
     const user = {
         email: correo,
-        pass: password,
+        pass: password
     };
     try {
         const result = await excuteQuery({
-            query: 'SELECT idUsuario FROM usuario WHERE mail = ? AND password = ?',
-            values: [user.email, user.pass],
+            query: "SELECT idUsuario FROM usuario WHERE mail = ? AND password = ?",
+            values: [user.email, user.pass]
         });
         console.log(result);
         return result;
@@ -76,8 +95,8 @@ export async function validateUser(correo, password) {
 export async function getEmotionimg(idEmocion) {
     try {
         const result = await excuteQuery({
-            query: 'SELECT imagen FROM emocion where idEmocion = ?',
-            values: [idEmocion],
+            query: "SELECT imagen FROM emocion where idEmocion = ?",
+            values: [idEmocion]
         });
         return result;
     } catch (error) {
@@ -85,15 +104,13 @@ export async function getEmotionimg(idEmocion) {
     }
 }
 
+export async function getEvents() {}
 
+export async function postReaction() {}
 
-export async function getEvents() { }
+export async function getCalendarEvent() {}
 
-export async function postReaction() { }
-
-export async function getCalendarEvent() { }
-
-export async function createCalendarEvent() { }
+export async function createCalendarEvent() {}
 
 export async function createPost(
     premium,
@@ -106,14 +123,7 @@ export async function createPost(
     try {
         const result = await executeQuery(
             "INSERT INTO post (premium,fechapost,idUsuario,idEmocion,path_img,descripcion) VALUES (?,?,?,?,?,?)",
-            [
-                premium,
-                fechapost,
-                idUsuario,
-                idEmocion,
-                path_img,
-                descripcion
-            ]
+            [premium, fechapost, idUsuario, idEmocion, path_img, descripcion]
         );
 
         let posts = JSON.parse(JSON.stringify(result));

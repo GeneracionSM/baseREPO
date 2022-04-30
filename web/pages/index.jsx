@@ -30,13 +30,16 @@ export default function Index() {
                             l'art.
                         </div>
                     </div>
-                    
-                    {login ? <Login onRegisterClick={() => setLogin(false)} /> : <Register /> } 
+
+                    {login ? (
+                        <Login onRegisterClick={() => setLogin(false)} />
+                    ) : (
+                        <Register />
+                    )}
                 </div>
             </div>
 
             <Footer />
-           
         </>
     );
 }

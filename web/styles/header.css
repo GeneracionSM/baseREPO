@@ -1,13 +1,13 @@
-.navbar{
-    background-image: linear-gradient(to right, #E5256E, #ba327a, #A7377F); 
+.navbar {
+    background-image: linear-gradient(to right, #e5256e, #ba327a, #a7377f);
 }
 
-.navbar a{
+.navbar a {
     color: white;
-    font-family:  "Andale Mono";
+    font-family: "Andale Mono";
     font-weight: bold;
 }
 
-.navbar a:hover{
+.navbar a:hover {
     color: #e882a9;
 }

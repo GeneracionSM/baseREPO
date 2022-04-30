@@ -2,7 +2,7 @@ import React from "react";
 import executeQuery from "../../../lib/db";
 import moment from "moment";
 
-export function Login( {onRegisterClick} ) {
+export function Login({ onRegisterClick }) {
     return (
         <div className="my-form offset-lg-1 col-lg-4">
             <div className="shadow-lg p-4 mb-5 bg-body rounded">
@@ -31,7 +31,7 @@ export function Login( {onRegisterClick} ) {
                             Inicia sessió
                         </button>
                         &nbsp;
-                        <button 
+                        <button
                             type="button"
                             id="b-register"
                             className="my-outline-btn btn btn-outline-secondary padding padding-2"

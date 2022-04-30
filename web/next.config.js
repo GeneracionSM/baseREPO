@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,
-   /* env: {
+    /* env: {
         MYSQL_HOST: "127.0.0.1",
         MYSQL_PORT: "3306",
         MYSQL_DATABASE: "hackathon",
@@ -9,15 +9,15 @@ const nextConfig = {
         MYSQL_PASSWORD: ""
     }*/
     future: {
-        webpack5: true,
+        webpack5: true
     },
-    webpack(config){
+    webpack(config) {
         config.resolve.fallback = {
             ...config.resolve.fallback,
-            fs: false,
+            fs: false
         };
         return config;
-    },
+    }
 };
 
 module.exports = nextConfig;

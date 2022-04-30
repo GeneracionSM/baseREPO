@@ -1,4 +1,4 @@
-#title{
+#title {
     text-align: center;
     /*margin: 25px;*/
     padding: 35px;
@@ -9,50 +9,50 @@ h1 {
     display: inline-block;
 }
 
-.padding{
+.padding {
     margin-top: 5px;
 }
 
-.padding-2{
+.padding-2 {
     margin-top: 10px;
 }
 
-#my-form{
+#my-form {
     margin-bottom: 24px;
 }
 
-.my-btn{
-    background-color:#b93179 !important;
+.my-btn {
+    background-color: #b93179 !important;
     border-color: #b93179 !important;
     color: white;
 }
 
-.my-btn:hover{
-    background-color:purple !important;
+.my-btn:hover {
+    background-color: purple !important;
     border-color: purple !important;
     color: white;
 }
 
-.my-outline-btn{
-    border-color:#b93179 !important;
+.my-outline-btn {
+    border-color: #b93179 !important;
     color: #b93179 !important;
 }
 
-.my-outline-btn:hover{
-    background-color:#b93179 !important;
-    color: white ;
+.my-outline-btn:hover {
+    background-color: #b93179 !important;
+    color: white;
 }
 
-body{
+body {
     position: relative;
     padding-bottom: 90px;
     min-height: 100vh;
-    overflow-x: hidden
+    overflow-x: hidden;
 }
 
-footer{
+footer {
     text-align: center;
-    background-color:#b93179;
+    background-color: #b93179;
     width: 100%;
     height: 80px;
     bottom: 0px;

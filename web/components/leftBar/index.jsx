@@ -1,7 +1,5 @@
 import React from "react";
 
 export function LeftBar() {
-    return (
-        <div className="leftBar"> </div>
-    );
+    return <div className="leftBar"> </div>;
 }
