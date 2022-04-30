@@ -1,8 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
 import { React, useState } from "react";
-import { Footer } from "../components/Footer";
-import { Login } from "../components/Login";
+import { Footer } from "../components/footer";
+import { Login } from "../components/login";
+import { Register } from "../components/register";
 
 export default function Index() {
     const [login, setLogin] = useState(true);
