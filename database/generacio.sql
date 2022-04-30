@@ -73,6 +73,7 @@ CREATE TABLE `mensaje` (
   `nombreUsuario` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+
 -- --------------------------------------------------------
 
 --
@@ -167,6 +168,8 @@ CREATE TABLE `usuario` (
   `nombreUsuario` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+
+
 --
 -- Índices para tablas volcadas
 --
@@ -198,6 +201,7 @@ ALTER TABLE `feedback`
 ALTER TABLE `mensaje`
   ADD PRIMARY KEY (`idMensaje`),
   ADD KEY `nombreUsuario` (`nombreUsuario`);
+
 
 --
 -- Indices de la tabla `post`
@@ -353,3 +357,23 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+INSERT INTO `emocion` (`nombre`, `imagen`) VALUES
+('Content', './Emojis/content.svg'),
+('Trist', './Emojis/trist.svg'),
+('Sorprès', './Emojis/sorpres.svg'),
+('Enfadat', './Emojis/enfadat.svg'),
+('Nerviós', './Emojis/nervios.svg'),
+('Enrabiat', './Emojis/enrabiat.svg'),
+('Eufòric', './Emojis/euforic.svg'),
+('Emocionat', './Emojis/emocionat.svg'),
+('Melancòlic', './Emojis/melancolid.svg'),
+('Il·lusionat', './Emojis/ilusionat.svg')
+;
+
+INSERT INTO `usuario` (`nombreUsuario`, `nombre`, `apellido_1`, `apellido_2`, `correo`, `password`, `fecha_nacimiento`) VALUES
+(1, 'Adefesio', 'Javier', 'Vazquez', 'adefesio.javier@gmail.com', 'passadefesio', '2013-04-09');
+
+INSERT INTO `mensaje` (`nombreUsuario`,`idMensaje`, `descripcion`, `titulo`) VALUES
+(1, 'No es que no sepas programar, es que te falta RAM', 'La vida');
+

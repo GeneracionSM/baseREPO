@@ -70,7 +70,6 @@ CREATE TABLE emocion(
     idEmocion INT AUTO_INCREMENT,
     nombreImagen VARCHAR(50),
     nombre VARCHAR(25),
-    idEtiq INT,
     PRIMARY KEY(idEmocion)
 );
 
@@ -89,6 +88,12 @@ CREATE TABLE r_nombreUsuario_tematica(
     PRIMARY KEY(nombreUsuario, idTem)
 );
 
+CREATE TABLE r_Etiqueta_Emocion(
+    idEtiqueta INT,
+    idEmocion INT,
+    PRIMARY KEY(idEtiqueta, idEmocion)
+);
+
 ALTER TABLE
     r_nombreUsuario_tematica
 ADD
@@ -98,6 +103,16 @@ ALTER TABLE
     r_nombreUsuario_tematica
 ADD
     FOREIGN KEY (idTem) REFERENCES tematica(idTem);
+
+ALTER TABLE
+    r_Etiqueta_Emocion
+ADD
+    FOREIGN KEY (idEtiqueta) REFERENCES Etiqueta(idEtiqueta);
+
+ALTER TABLE
+    r_Etiqueta_Emocion
+ADD
+    FOREIGN KEY (idEmocion) REFERENCES Emocion(idEmocion);
 
 ALTER TABLE
     publicacion
@@ -123,11 +138,6 @@ ALTER TABLE
     post
 ADD
     FOREIGN KEY (nombreUsuario) REFERENCES usuario(nombreUsuario);
-
-ALTER TABLE
-    emocion
-ADD
-    FOREIGN KEY (idEtiq) REFERENCES etiqueta(idEtiqueta);
 
 ALTER TABLE
     sesion
