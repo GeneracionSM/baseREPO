@@ -1,10 +1,11 @@
 import React from "react";
+import Image from "next/image";
 import "./avatar.scss";
 
 export function Avatar() {
     return (
         <div>
-            <img src="/logo.svg" alt="logo" />
+            <Image src="/logo.svg" alt="logo" />
         </div>
     );
 }
