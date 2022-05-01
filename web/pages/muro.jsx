@@ -1,28 +1,25 @@
-import { SimpleGrid, Box } from "@chakra-ui/react";
+import { Flex, Box, Center, Square, Text } from "@chakra-ui/react";
 import { Header } from "../components/header";
 import { LeftBar } from "../components/leftBar";
-import { useState, useEffect } from 'react';
-
+import { RightBar } from "../components/rightBar";
+import { PublicationList } from "../components/publication_list";
 
 export default function Index() {
-
     return (
         <>
-            <Header
-                height='50px'
-                width='100%'
-            />
-            <SimpleGrid columns={3} spacing={1}>
-                <LeftBar
-                    height='2000px'
-                    width='50%'
-                />
+            <Header />
 
-                <Box bg='tomato' height='80px'>
-
+            <Flex>
+                <Center w="20%" bg="green.500" ml="20px">
+                    <LeftBar/>
+                </Center>
+                <Square bg="blue.200" w="60%">
+                    {/* <PublicationList/> */}
+                </Square>
+                <Box flex="1" bg="blue.100">
+                    <RightBar/>
                 </Box>
-                <Box bg='tomato' height='80px'></Box>
-            </SimpleGrid>
+            </Flex>
         </>
     );
 }

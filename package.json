@@ -18,6 +18,8 @@
         "moment": "^2.29.2",
         "net": "^1.0.2",
         "react-calendar": "^3.7.0",
+        "react-dater": "^1.6.0",
+        "react-icons": "^4.3.1",
         "serverless-mysql": "^1.5.4",
         "sweetalert2": "^11.4.8",
         "tls": "^0.0.1"

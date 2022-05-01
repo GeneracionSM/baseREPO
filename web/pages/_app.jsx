@@ -1,8 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../styles/index.css";
-import "../styles/header.css";
-import "../styles/register.css";
-
 import Head from "next/head";
 import { ChakraProvider } from "@chakra-ui/react";
 

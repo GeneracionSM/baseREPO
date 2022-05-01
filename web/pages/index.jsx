@@ -28,7 +28,6 @@ export default function Index() {
             </SimpleGrid>
 
             <Footer />
-
         </>
     );
 }
