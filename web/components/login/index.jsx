@@ -1,50 +1,32 @@
 import React from "react";
 import executeQuery from "../../../lib/db";
 import moment from "moment";
+import { FormControl, Button, Input } from "@chakra-ui/react";
 
-export function Login( {onRegisterClick} ) {
+export function Login({ onRegisterClick }) {
     return (
-        <div className="my-form offset-lg-1 col-lg-4">
-            <div className="shadow-lg p-4 mb-5 bg-body rounded">
-                <form name="f-login" method="post">
-                    <div id="form">
-                        <label htmlFor="username">Usuari:</label>
-                        <input
-                            id="i-username"
-                            name="username"
-                            className="form-control padding"
-                            required
-                        />
-                        <label htmlFor="password">Contrassenya:</label>
-                        <input
-                            id="i-password"
-                            type="password"
-                            name="password"
-                            className="form-control padding"
-                            required
-                        />
-                        <button
-                            id="b-login"
-                            type="submit"
-                            className="my-btn btn btn-secondary padding padding-2"
-                        >
-                            Inicia sessió
-                        </button>
-                        &nbsp;
-                        <button 
-                            type="button"
-                            id="b-register"
-                            className="my-outline-btn btn btn-outline-secondary padding padding-2"
-                            href="#"
-                            role="button"
-                            onClick={onRegisterClick}
-                        >
-                            Registra't
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
+        <>
+            <FormControl boxShadow='xl' p='8' rounded='md' bg='white'>
+                <Input pt={1} id='username' placeholder='Usuari' />
+                <Input mt={1} id='password' type='password' placeholder='Contrassenya' />
+                <Button
+                    mt={4}
+                    colorScheme='pink'
+                    type='submit'
+                >
+                    Iniciar sessió
+                </Button>
+                <Button
+                    ml={2}
+                    mt={4}
+                    colorScheme='purple'
+                    type='submit'
+                    onClick={onRegisterClick}
+                >
+                    Registra't
+                </Button>
+            </FormControl>
+        </>
     );
 }
 
