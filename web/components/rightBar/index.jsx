@@ -8,8 +8,8 @@ export function RightBar() {
 
     return (
         <>
-            <Box p={"10px"}>
-                <Calendar onChange={onChange} value={value} />
+            <Box p={"10px"} >
+                <Calendar onChange={onChange} value={value} w={{ base: "300px", md: "400px", lg: "500px" }} />
             </Box>
         </>
     );

@@ -33,7 +33,9 @@ export function LeftBar({ children }) {
     const { isOpen, onOpen, onClose } = useDisclosure();
     
     return (
-        <Box minH="100vh" bg={useColorModeValue("gray.100", "gray.900")}>
+        
+        <Box minH="100vh" bg={useColorModeValue("white.100", "white.900")}>
+            
             <SidebarContent
                 onClose={() => onClose}
                 display={{ base: "none", md: "block" }}
@@ -45,7 +47,7 @@ export function LeftBar({ children }) {
                 onClose={onClose}
                 returnFocusOnClose={false}
                 onOverlayClick={onClose}
-                size="full"
+                size="xl"
             >
                 <DrawerContent>
                     <SidebarContent onClose={onClose} />
@@ -81,6 +83,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
                     Logo
                 </Text>
                 <CloseButton
+                    
                     display={{ base: "flex", md: "none" }}
                     onClick={onClose}
                 />
@@ -145,20 +148,14 @@ const MobileNav = ({ onOpen, ...rest }) => {
             {...rest}
         >
             <IconButton
+                pos="fixed"
                 variant="outline"
                 onClick={onOpen}
                 aria-label="open menu"
                 icon={<FiMenu />}
             />
 
-            <Text
-                fontSize="2xl"
-                ml="8"
-                fontFamily="monospace"
-                fontWeight="bold"
-            >
-                Logo
-            </Text>
+            
         </Flex>
     );
 };
