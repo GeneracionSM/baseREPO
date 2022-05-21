@@ -24,10 +24,11 @@ export default function Index() {
                 </Box>
                 <Box align='center' justifyContent="center" width='60%' height='185'>
                     {login ? <Login onRegisterClick={() => setLogin(false)} /> : <Register />}
+                    
                 </Box>
             </SimpleGrid>
 
-            <Footer />
+            {/* <Footer /> */}
         </>
     );
 }

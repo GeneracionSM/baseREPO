@@ -3,21 +3,26 @@ import { Header } from "../components/header";
 import { RightBar } from "../components/rightBar";
 import { PublicationList } from "../components/publication_list";
 import { LeftBar } from "../components/leftBar";
+import { PopupWelcome } from "../components/popup_welcome";
+import { Publication } from "../components/publication";
 
 export default function Index() {
     return (
         <>
-            <Header />
 
+            <Header />
+            {/* <PopupWelcome text="KLk manin" /> */}
             <Flex>
                 <Box flex="20%">
-                    <LeftBar/>
+                    <LeftBar />
                 </Box>
-                <Box bg="blue.200" w="60%">
-                    {/* <PublicationList/> */}
+                <Box w="60%">
+                    <PublicationList/>
+
+
                 </Box>
                 <Box w="20%">
-                    <RightBar/>
+                    <RightBar />
                 </Box>
             </Flex>
         </>

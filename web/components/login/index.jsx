@@ -2,6 +2,7 @@ import React from "react";
 import executeQuery from "../../../lib/db";
 import moment from "moment";
 import { FormControl, Button, Input } from "@chakra-ui/react";
+import Link from "next/link";
 
 export function Login({ onRegisterClick }) {
     return (
@@ -9,13 +10,16 @@ export function Login({ onRegisterClick }) {
             <FormControl boxShadow='xl' p='8' rounded='md' bg='white'>
                 <Input pt={1} id='username' placeholder='Usuari' />
                 <Input mt={1} id='password' type='password' placeholder='Contrassenya' />
-                <Button
+                {/* <Button
                     mt={4}
                     colorScheme='pink'
                     type='submit'
                 >
                     Iniciar sessió
-                </Button>
+                </Button> */}
+                <Link href="/muro">
+                    Iniciar Sessió
+                </Link>
                 <Button
                     ml={2}
                     mt={4}

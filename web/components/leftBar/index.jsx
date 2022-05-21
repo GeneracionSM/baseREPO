@@ -5,7 +5,6 @@ import {
     Flex,
     Icon,
     useColorModeValue,
-    Link,
     Drawer,
     DrawerContent,
     Text,
@@ -13,6 +12,7 @@ import {
     BoxProps,
     FlexProps
 } from "@chakra-ui/react";
+
 import {
     FiHome,
     FiTrendingUp,
@@ -22,20 +22,20 @@ import {
     FiMenu
 } from "react-icons/fi";
 
+import Link from "next/link";
+
 const LinkItems = [
-    { name: "Inici", icon: FiHome },
-    { name: "Cercar", icon: FiTrendingUp },
-    { name: "Emocions", icon: FiCompass },
-    { name: "Preferències", icon: FiSettings }
+    { name: "Inici", icon: FiHome, link: "/muro" },
+    { name: "Cercar", icon: FiTrendingUp, link: "/search" },
+    { name: "Emocions", icon: FiCompass, link: "/emocions" },
+    { name: "Preferències", icon: FiSettings, link: "/settings" }
 ];
 
 export function LeftBar({ children }) {
     const { isOpen, onOpen, onClose } = useDisclosure();
-    
+
     return (
-        
         <Box minH="100vh" bg={useColorModeValue("white.100", "white.900")}>
-            
             <SidebarContent
                 onClose={() => onClose}
                 display={{ base: "none", md: "block" }}
@@ -83,7 +83,6 @@ const SidebarContent = ({ onClose, ...rest }) => {
                     Logo
                 </Text>
                 <CloseButton
-                    
                     display={{ base: "flex", md: "none" }}
                     onClick={onClose}
                 />
@@ -91,12 +90,12 @@ const SidebarContent = ({ onClose, ...rest }) => {
             {LinkItems.map((link) => (
                 <NavItem key={link.name} icon={link.icon}>
                     {link.name}
+                    <Link href={link.link}> </Link>
                 </NavItem>
             ))}
         </Box>
     );
 };
-
 
 const NavItem = ({ icon, children, ...rest }) => {
     return (
@@ -154,8 +153,6 @@ const MobileNav = ({ onOpen, ...rest }) => {
                 aria-label="open menu"
                 icon={<FiMenu />}
             />
-
-            
         </Flex>
     );
 };

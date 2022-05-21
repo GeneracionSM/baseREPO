@@ -1,88 +1,49 @@
 import {
     Box,
-    Image,
     Avatar,
     Heading,
     Text,
     Button,
-    Stack
+    Stack,
+    Divider,
+    AvatarGroup
 } from "@chakra-ui/react";
 
-export function Publication() {
-    const property = {
-        imageUrl: "https://bit.ly/2Z4KKcF",
-        imageAlt: "Post", // Agregar aquí el nombre de usuario
-        title: "" // Poner aquí la descripción de la imagen
-    };
+import Image from "next/image";
 
+import Emotion from "../emotion";
+
+export function Publication({ userName, userImage, description, postImage }) {
     return (
         <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
             <Box p="2" display="flex" alignItems="center">
-                <Avatar src="https://bit.ly/broken-link" size="sm" />
+                <Avatar src={userImage} size="sm" />
                 <Heading as="h6" size="xs" p="2">
-                    Usuario
+                    {userName}
                 </Heading>
             </Box>
 
-            <Image src={property.imageUrl} alt={property.imageAlt} />
+            {/*<Image src={postImage} alt="publication" width={100} height={100}  />*/}
 
             <Box p="6">
                 <Box display="flex" alignItems="baseline">
                     <Heading as="h6" size="xs">
-                        Usuario
+                        {userName}
                     </Heading>
                     <Text fontSize="sm" p="2">
-                        Descripción del post
+                        {description}
                     </Text>
                 </Box>
                 <Box>
                     <Text fontSize="sm">Fecha</Text>
                 </Box>
                 <Box display="flex" alignItems="baseline" p="2">
-                    <Stack direction="row" spacing={1} align="center">
-                        <Button
-                            colorScheme="teal"
-                            variant="ghost"
-                            leftIcon={
-                                <Avatar
-                                    src="https://bit.ly/kent-c-dodds"
-                                    size="sm"
-                                />
-                            }
-                            isDisabled="true"
-                        ></Button>
-                        <Button
-                            colorScheme="teal"
-                            variant="ghost"
-                            leftIcon={
-                                <Avatar
-                                    src="https://bit.ly/ryan-florence"
-                                    size="sm"
-                                />
-                            }
-                            isDisabled="true"
-                        ></Button>
-                        <Button
-                            colorScheme="teal"
-                            variant="ghost"
-                            leftIcon={
-                                <Avatar
-                                    src="https://bit.ly/prosper-baba"
-                                    size="sm"
-                                />
-                            }
-                        ></Button>
-                        <Button
-                            colorScheme="teal"
-                            variant="ghost"
-                            leftIcon={
-                                <Avatar
-                                    src="https://bit.ly/tioluwani-kolawole"
-                                    size="sm"
-                                />
-                            }
-                        ></Button>
-                    </Stack>
+                    {/*<Image src="/Emojis/euforic.svg" width={100} height={100} />
+                    <Emotion src="/Emojis/euforic.svg" />
+                    <Emotion src="/Emojis/content.svg" />
+                    <Emotion src="/Emojis/sorpres.svg" />
+                    <Emotion src="/Emojis/trist.svg" />
+    <Emotion src="/Emojis/enfadat.svg" />*/}
                 </Box>
                 <Divider orientation="horizontal" variant="solid" />
             </Box>
