@@ -10,13 +10,13 @@ export default function Index() {
             <Header />
 
             <Flex>
-                <Box flex="1" bg="green.500">
+                <Box w="20%" bg="green.500">
                     {/* <LeftBar/> */}
                 </Box>
                 <Box bg="blue.200" w="60%">
                     {/* <PublicationList/> */}
                 </Box>
-                <Box flex="1">
+                <Box w="20%">
                     <RightBar/>
                 </Box>
             </Flex>
