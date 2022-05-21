@@ -10,27 +10,30 @@ import {
     DrawerContent,
     Text,
     useDisclosure,
-    FiHome,
-    FiUser,
-    FiCompass,
-    FiSettings,
-    FiLogOut,
-    FiMenu
+    BoxProps,
+    FlexProps
 } from "@chakra-ui/react";
+import {
+    FiHome,
+    FiTrendingUp,
+    FiCompass,
+    FiStar,
+    FiSettings,
+    FiMenu
+} from "react-icons/fi";
 
 const LinkItems = [
-    { name: 'Mur', icon: FiHome },
-    { name: 'Usuari', icon: FiUser },
-    { name: 'Cerca', icon: FiCompass },
-    { name: 'Configuració', icon: FiSettings },
-    { name: 'Sortir', icon: FiLogOut }
+    { name: "Inici", icon: FiHome },
+    { name: "Cercar", icon: FiTrendingUp },
+    { name: "Emocions", icon: FiCompass },
+    { name: "Preferències", icon: FiSettings }
 ];
 
 export function LeftBar({ children }) {
     const { isOpen, onOpen, onClose } = useDisclosure();
-
+    
     return (
-        <Box minH="100vh" bg={useColorModeValue("white", "blue")}>
+        <Box minH="100vh" bg={useColorModeValue("gray.100", "gray.900")}>
             <SidebarContent
                 onClose={() => onClose}
                 display={{ base: "none", md: "block" }}
@@ -91,6 +94,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
     );
 };
 
+
 const NavItem = ({ icon, children, ...rest }) => {
     return (
         <Link
@@ -106,7 +110,7 @@ const NavItem = ({ icon, children, ...rest }) => {
                 role="group"
                 cursor="pointer"
                 _hover={{
-                    bg: "#fe027f",
+                    bg: "cyan.400",
                     color: "white"
                 }}
                 {...rest}

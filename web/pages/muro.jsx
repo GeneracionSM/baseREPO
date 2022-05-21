@@ -1,8 +1,8 @@
 import { Flex, Box, Center, Square, Text } from "@chakra-ui/react";
 import { Header } from "../components/header";
-import { LeftBar } from "../components/leftBar";
 import { RightBar } from "../components/rightBar";
 import { PublicationList } from "../components/publication_list";
+import { LeftBar } from "../components/leftBar";
 
 export default function Index() {
     return (
@@ -10,8 +10,8 @@ export default function Index() {
             <Header />
 
             <Flex>
-                <Box w="20%" bg="green.500">
-                    {/* <LeftBar/> */}
+                <Box flex="20%">
+                    <LeftBar/>
                 </Box>
                 <Box bg="blue.200" w="60%">
                     {/* <PublicationList/> */}

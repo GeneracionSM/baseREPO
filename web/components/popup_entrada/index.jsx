@@ -12,3 +12,42 @@ export async function getEmotions() {
     }
 }
 
+export default function Emociones({src}) {
+    return (
+        <>
+            <IconButton isRound icon={<Avatar src={src}/>}/>
+        </>
+    );
+}
+
+export default function PopupEntrada() {
+    return (
+        <>
+                                <Modal isCentered isOpen={isOpen} onClose={onClose}>
+                {overlay}
+                <Center>
+                    <ModalContent>F
+                        <ModalHeader>
+                            <Center>Benvingut!</Center>
+                        </ModalHeader>
+                        <ModalCloseButton />
+                        <ModalBody>
+                            <Center>Avui serà un bon dia :)</Center>
+                        </ModalBody>
+                        <Center>
+                            <ModalFooter>
+                                <AvatarGroup spacing="1rem">
+                                    
+                                    <Avatar bg="teal.500" />
+                                    <Avatar bg="teal.500" />
+                                    <Avatar bg="teal.500" />
+                                    <Avatar bg="teal.500" />
+                                </AvatarGroup>
+                            </ModalFooter>
+                        </Center>
+                    </ModalContent>
+                </Center>
+            </Modal>
+        </>
+    );
+}
