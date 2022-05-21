@@ -11,7 +11,7 @@ export default function Index() {
 
             <Flex>
                 <Center w="20%" bg="green.500" ml="20px">
-                    <LeftBar/>
+                    {/* <LeftBar/> */}
                 </Center>
                 <Square bg="blue.200" w="60%">
                     {/* <PublicationList/> */}

@@ -2,14 +2,15 @@ import {
     Box,
     chakra,
     Container,
-    Image,
-    Link,
-    Stack,
     Text,
+    Image,
+    Stack,
     useColorModeValue,
-    VisuallyHidden
+    VisuallyHidden,
+    FaTwitter,
+    FaYoutube,
+    FaInstagram
 } from "@chakra-ui/react";
-import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const Logo = () => {
     return (
@@ -17,7 +18,7 @@ const Logo = () => {
     );
 };
 
-const SocialButton = ({ children, label, href }) => {
+function SocialButton({ children, label, href }) {
     return (
         <chakra.button
             bg={useColorModeValue("blackAlpha.blue", "whiteAlpha.100")}

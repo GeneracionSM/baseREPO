@@ -10,23 +10,20 @@ import {
     DrawerContent,
     Text,
     useDisclosure,
+    FiHome,
+    FiUser,
+    FiCompass,
+    FiSettings,
+    FiLogOut,
+    FiMenu
 } from "@chakra-ui/react";
 
-import {
-    FiHome,
-    FiTrendingUp,
-    FiCompass,
-    FiStar,
-    FiSettings,
-    FiMenu
-} from "react-icons/fi";
-
 const LinkItems = [
-    { name: "Home", icon: FiHome },
-    { name: "Trending", icon: FiTrendingUp },
-    { name: "Explore", icon: FiCompass },
-    { name: "Favourites", icon: FiStar },
-    { name: "Settings", icon: FiSettings }
+    { name: 'Mur', icon: FiHome },
+    { name: 'Usuari', icon: FiUser },
+    { name: 'Cerca', icon: FiCompass },
+    { name: 'Configuració', icon: FiSettings },
+    { name: 'Sortir', icon: FiLogOut }
 ];
 
 export function LeftBar({ children }) {
