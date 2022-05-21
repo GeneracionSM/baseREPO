@@ -11,3 +11,4 @@ export async function getEmotions() {
         console.log(error);
     }
 }
+
