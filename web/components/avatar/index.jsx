@@ -1,11 +1,12 @@
-import React from "react";
-import Image from "next/image";
-import "./avatar.scss";
+import { Image } from "@chakra-ui/react";
 
-export function Avatar() {
+export function Avatar({ src }) {
     return (
-        <div>
-            <Image src="/logo.svg" alt="logo" />
-        </div>
+        <Image
+            borderRadius="full"
+            boxSize="60px"
+            src="https://bit.ly/dan-abramov"
+            p="5px"
+        />
     );
 }

@@ -1,146 +1,123 @@
-import React from "react";
-import executeQuery from "../../../lib/db";
-import moment from "moment";
+import {
+    Flex,
+    Box,
+    FormControl,
+    FormLabel,
+    Input,
+    InputGroup,
+    HStack,
+    InputRightElement,
+    Stack,
+    Button,
+    Heading,
+    Text,
+    useColorModeValue,
+    Link,
+    Divider
+} from "@chakra-ui/react";
+import { useState } from "react";
+/* import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons"; */
 
 export function Register() {
+    const [showPassword, setShowPassword] = useState(false);
+
     return (
-        <div className="col-lg-6 form">
-            <div id="my-form" className="row form">
-                <div className="col-lg-11 offset-lg-1">
-                    <div className="shadow-lg p-4 bg-body rounded">
-                        <form method="post">
-                            <label>
-                                Nom<span className="c-span">*</span>:
-                            </label>
-                            <input
-                                name="name"
-                                className="form-control"
-                                placeholder="Nombre"
-                                required
-                            />
-                            <div className="row">
-                                <div className="col-md-6">
-                                    <label className="padding-2">
-                                        Primer cognom
-                                        <span className="c-span">*</span>:
-                                    </label>
-                                    <input
-                                        name="surname1"
-                                        className="form-control"
-                                        placeholder="Primer cognom"
-                                        required
-                                    />
-                                </div>
-                                <div className="col-md-6">
-                                    <label className="padding-2">
-                                        Segon cognom:
-                                    </label>
-                                    <input
-                                        name="surname2"
-                                        className="form-control"
-                                        placeholder="Segon cognom"
-                                    />
-                                </div>
-                            </div>
-
-                            <label className="padding-2">
-                                Data de naixament
-                                <span className="c-span">*</span>:
-                            </label>
-                            <input
-                                type="date"
-                                name="dateofbirth"
-                                className="form-control"
-                                min="1920-1-01"
-                                max="2023-12-31"
-                                required
-                            />
-                            <label className="padding-2">
-                                Usuari<span className="c-span">*</span>:
-                            </label>
-                            <input
-                                name="username"
-                                className="form-control"
-                                placeholder="Usuari"
-                                required
-                            />
-                            <div className="row">
-                                <div className="col-md-6">
-                                    <label className="padding-2">
-                                        Contrassenya
-                                        <span className="color: pur;">*</span>:
-                                    </label>
-                                    <input
-                                        type="password"
-                                        name="password"
-                                        className="form-control"
-                                        placeholder="Contrassenya"
-                                        required
-                                    />
-                                </div>
-                                <div className="col-md-6">
-                                    <label className="padding-2">
-                                        Repeteix la contrassenya
-                                        <span className="c-span">*</span>:
-                                    </label>
-                                    <input
-                                        type="password"
-                                        name="password2"
-                                        className="form-control"
-                                        placeholder="Contrassenya"
-                                        required
-                                    />
-                                </div>
-                            </div>
-                            <button
-                                type="submit"
-                                className="b-width my-btn btn btn-secondary padding-2"
+        <Flex align={"center"} justify={"center"}>
+            <Stack spacing={8} mx={"auto"} maxW={"lg"}>
+                <Stack align={"center"}>
+                    <Heading fontSize={"4xl"} textAlign={"center"}>
+                        Crea el teu compte
+                    </Heading>
+                    <Text fontSize={"lg"} color={"gray.600"}>
+                        i disfruta de l'art arreu del món ✌️
+                    </Text>
+                </Stack>
+                <Box
+                    rounded={"lg"}
+                    bg={useColorModeValue("white", "gray.700")}
+                    boxShadow={"lg"}
+                    p={8}
+                >
+                    <Stack spacing={4}>
+                        <FormControl id="firstName" isRequired>
+                            <FormLabel>Nom</FormLabel>
+                            <Input type="text" />
+                        </FormControl>
+                        <HStack>
+                            <Box>
+                                <FormControl id="firstName" isRequired>
+                                    <FormLabel>Primer Cognom</FormLabel>
+                                    <Input type="text" />
+                                </FormControl>
+                            </Box>
+                            <Box>
+                                <FormControl id="lastName" isRequired>
+                                    <FormLabel>Segon Cognom</FormLabel>
+                                    <Input type="text" />
+                                </FormControl>
+                            </Box>
+                        </HStack>
+                        <FormControl id="date" isRequired>
+                            <FormLabel>Data de naixement</FormLabel>
+                            <Input type="date" />
+                        </FormControl>
+                        <FormControl id="email" isRequired>
+                            <FormLabel>Correu electrònic</FormLabel>
+                            <Input type="email" />
+                        </FormControl>
+                        <FormControl id="user" isRequired>
+                            <FormLabel>Usuari</FormLabel>
+                            <Input type="text" />
+                        </FormControl>
+                        <FormControl id="password" isRequired>
+                            <FormLabel>Contrassenya</FormLabel>
+                            <InputGroup>
+                                <Input
+                                    type={showPassword ? "text" : "password"}
+                                />
+                                <InputRightElement h={"full"}>
+                                    <Button
+                                        variant={"ghost"}
+                                        onClick={() =>
+                                            setShowPassword(
+                                                (showPassword) => !showPassword
+                                            )
+                                        }
+                                    >
+                                        {/* {showPassword ? (
+                                            <ViewIcon />
+                                        ) : (
+                                            <ViewOffIcon />
+                                        )} */}
+                                    </Button>
+                                </InputRightElement>
+                            </InputGroup>
+                        </FormControl>
+                        <Stack spacing={10} pt={2}>
+                            <Button
+                                loadingText="Submitting"
+                                size="lg"
+                                bg={"#d72a73"}
+                                color={"white"}
+                                _hover={{
+                                    bg: "#a32057"
+                                }}
                             >
-                                Registra't
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+                                Registrar
+                            </Button>
+                        </Stack>
+                        <Divider />
+                        <Stack pt={6}>
+                            <Text align={"center"}>
+                                Ja ets usuari?{" "}
+                                <Link href="/" color={"blue.400"}>
+                                    Iniciar sessió
+                                </Link>
+                            </Text>
+                        </Stack>
+                    </Stack>
+                </Box>
+            </Stack>
+        </Flex>
     );
-}
-
-export async function createUser(
-    nombre,
-    apellido_uno,
-    apellido_dos,
-    fecha_nacimiento,
-    alias,
-    correo,
-    password
-) {
-    const user = {
-        name: nombre,
-        ap_uno: apellido_uno,
-        ap_dos: apellido_dos,
-        fc_nc: fecha_nacimiento,
-        al: alias,
-        email: correo,
-        pass: password
-    };
-    try {
-        const result = await executeQuery({
-            query: "INSERT INTO usuario (nombre,apellido_1,apellido_2,mail,password,fecha_nacim,username) VALUES (?,?,?,?,?,?,?)",
-            values: [
-                user.name,
-                user.ap_uno,
-                user.ap_dos,
-                user.email,
-                user.pass,
-                user.fc_nc,
-                user.al
-            ]
-        });
-        console.log(result);
-    } catch (error) {
-        console.log(error);
-    }
-
-    return user;
 }
