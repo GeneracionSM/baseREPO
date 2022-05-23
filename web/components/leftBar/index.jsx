@@ -9,24 +9,21 @@ import {
     DrawerContent,
     Text,
     useDisclosure,
-    BoxProps,
-    FlexProps
 } from "@chakra-ui/react";
 
 import {
     FiHome,
-    FiTrendingUp,
     FiCompass,
-    FiStar,
     FiSettings,
-    FiMenu
+    FiMenu,
+    FiSearch
 } from "react-icons/fi";
 
 import Link from "next/link";
 
 const LinkItems = [
     { name: "Inici", icon: FiHome, link: "/muro" },
-    { name: "Cercar", icon: FiTrendingUp, link: "/search" },
+    { name: "Cercar", icon: FiSearch, link: "/search" },
     { name: "Emocions", icon: FiCompass, link: "/emocions" },
     { name: "Preferències", icon: FiSettings, link: "/settings" }
 ];
@@ -111,7 +108,7 @@ const NavItem = ({ link, icon, children, ...rest }) => {
                 role="group"
                 cursor="pointer"
                 _hover={{
-                    bg: "cyan.400",
+                    bg: "purple.400",
                     color: "white"
                 }}
                 {...rest}

@@ -63,7 +63,11 @@ export function Header() {
                                     <MenuDivider />
                                     <MenuItem>Perfil</MenuItem>
                                     <MenuItem>Historial d'emocions</MenuItem>
-                                    <MenuItem>Sortir</MenuItem>
+                                    <MenuItem>
+                                            <Link href="/">
+                                                Sortir
+                                            </Link>
+                                    </MenuItem>
                                 </MenuList>
                             </Menu>
                         </Stack>

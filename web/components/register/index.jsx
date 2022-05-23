@@ -1,84 +1,121 @@
-import React from "react";
-import executeQuery from "../../../lib/db";
-import moment from "moment";
-import { FormControl, FormLabel, Button, Input } from "@chakra-ui/react";
+import {
+    Flex,
+    Box,
+    FormControl,
+    FormLabel,
+    Input,
+    InputGroup,
+    HStack,
+    InputRightElement,
+    Stack,
+    Button,
+    Heading,
+    Text,
+    useColorModeValue,
+    Link,
+    Divider
+} from "@chakra-ui/react";
+import { useState } from "react";
+/* import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons"; */
 
 export function Register() {
+    const [showPassword, setShowPassword] = useState(false);
+
     return (
-        <>
-            <FormControl boxShadow='xl' p='8' rounded='md' bg='white'>
-                <FormLabel htmlFor='first-name'>Nom:</FormLabel>
-                <Input id='first-name' />
-                <FormLabel mt={2} htmlFor='first-surname'>Primer cognom:</FormLabel>
-                <Input id='first-surname' />
-                <FormLabel mt={2} htmlFor='first-surname'>Segon cognom:</FormLabel>
-                <Input id='second-surname' />
-                <FormLabel mt={2} htmlFor='email'>Data de naixament:</FormLabel>
-                <Input id='dob' type='date' />
-                <FormLabel mt={2} htmlFor='email'>Correu electrònic:</FormLabel>
-                <Input id='email' type='email' />
-                <FormLabel mt={2} htmlFor='username'>Usuari:</FormLabel>
-                <Input id='username' />
-                <FormLabel mt={2} htmlFor='password'>Contrassenya:</FormLabel>
-                <Input id='password' type='password' />
-                <FormLabel mt={2} htmlFor='password'>Repeteix la contrassenya:</FormLabel>
-                <Input id='password' type='password' />
-                <Button
-                    mt={2}
-                    colorScheme='pink'
-                    type='submit'
+        <Flex align={"center"} justify={"center"}>
+            <Stack spacing={8} mx={"auto"} maxW={"lg"} >
+                <Stack align={"center"}>
+                    <Heading fontSize={"4xl"} textAlign={"center"}>
+                        Crea el teu compte
+                    </Heading>
+                    <Text fontSize={"lg"} color={"gray.600"}>
+                        i disfruta de l'art arreu del món ✌️
+                    </Text>
+                </Stack>
+                <Box
+                    rounded={"lg"}
+                    bg={useColorModeValue("white", "gray.700")}
+                    boxShadow={"lg"}
+                    p={8}
                 >
-                    Registrar-se
-                </Button>
-                <Button
-                    mt={2}
-                    ml={2}
-                    colorScheme='purple'
-                    type='submit'
-                    
-                >
-                    Tornar enrere
-                </Button>
-            </FormControl>
-        </>
+                    <Stack spacing={4}>
+                        <FormControl id="firstName" isRequired>
+                            <FormLabel>Nom</FormLabel>
+                            <Input type="text" />
+                        </FormControl>
+                        <HStack>
+                            <Box>
+                                <FormControl id="firstName" isRequired>
+                                    <FormLabel>Primer Cognom</FormLabel>
+                                    <Input type="text" />
+                                </FormControl>
+                            </Box>
+                            <Box>
+                                <FormControl id="lastName" isRequired>
+                                    <FormLabel>Segon Cognom</FormLabel>
+                                    <Input type="text" />
+                                </FormControl>
+                            </Box>
+                        </HStack>
+                        <FormControl id="date" isRequired>
+                            <FormLabel>Data de naixement</FormLabel>
+                            <Input type="date" />
+                        </FormControl>
+                        <FormControl id="email" isRequired>
+                            <FormLabel>Correu electrònic</FormLabel>
+                            <Input type="email" />
+                        </FormControl>
+                        <FormControl id="user" isRequired>
+                            <FormLabel>Usuari</FormLabel>
+                            <Input type="text" />
+                        </FormControl>
+                        <FormControl id="password" isRequired>
+                            <FormLabel>Contrassenya</FormLabel>
+                            <InputGroup>
+                                <Input
+                                    type={showPassword ? "text" : "password"}
+                                />
+                                <InputRightElement h={"full"}>
+                                    <Button
+                                        variant={"ghost"}
+                                        onClick={() =>
+                                            setShowPassword(
+                                                (showPassword) => !showPassword
+                                            )
+                                        }
+                                    >
+                                        {/* {showPassword ? (
+                                            <ViewIcon />
+                                        ) : (
+                                            <ViewOffIcon />
+                                        )} */}
+                                    </Button>
+                                </InputRightElement>
+                            </InputGroup>
+                        </FormControl>
+                        <Stack spacing={10} pt={2}>
+                            <Button
+                                loadingText="Submitting"
+                                size="lg"
+                                bg={"blue.400"}
+                                color={"white"}
+                                _hover={{
+                                    bg: "blue.500"
+                                }}
+                            >
+                                Registrar
+                            </Button>
+                        </Stack>
+                        <Divider/>
+                        <Stack pt={6}>
+                            <Text align={"center"}>
+                                Ja ets usuari?{" "}
+                                <Link href="/" color={"blue.400"}>Iniciar sessió</Link>
+                            </Text>
+                        </Stack>
+                    </Stack>
+                </Box>
+            </Stack>
+        </Flex>
     );
-}
-
-export async function createUser(
-    nombre,
-    apellido_uno,
-    apellido_dos,
-    fecha_nacimiento,
-    alias,
-    correo,
-    password
-) {
-    const user = {
-        name: nombre,
-        ap_uno: apellido_uno,
-        ap_dos: apellido_dos,
-        fc_nc: fecha_nacimiento,
-        al: alias,
-        email: correo,
-        pass: password
-    };
-    try {
-        const result = await executeQuery({
-            query: "INSERT INTO usuario (nombre,apellido_1,apellido_2,mail,password,fecha_nacim,username) VALUES (?,?,?,?,?,?,?)",
-            values: [
-                user.name,
-                user.ap_uno,
-                user.ap_dos,
-                user.email,
-                user.pass,
-                user.fc_nc,
-                user.al
-            ]
-        });
-        console.log(result);
-    } catch (error) {
-        console.log(error);
-    }
-
-    return user;
 }

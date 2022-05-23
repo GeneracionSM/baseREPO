@@ -3,19 +3,13 @@ import {
     Avatar,
     Heading,
     Text,
-    Button,
-    Stack,
     Divider,
-    AvatarGroup
+    Image
 } from "@chakra-ui/react";
-
-import Image from "next/image";
-
-import Emotion from "../emotion";
 
 export function Publication({ userName, userImage, description, postImage }) {
     return (
-        <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
+        <Box minW="xl" borderWidth="1px" borderRadius="lg" overflow="hidden" mt={5}>
             <Box p="2" display="flex" alignItems="center">
                 <Avatar src={userImage} size="sm" />
                 <Heading as="h6" size="xs" p="2">
@@ -23,7 +17,7 @@ export function Publication({ userName, userImage, description, postImage }) {
                 </Heading>
             </Box>
 
-            {/*<Image src={postImage} alt="publication" width={100} height={100}  />*/}
+            <Image src={postImage} alt="publication" width={"100%"} height={"100%"}  />
 
             <Box p="6">
                 <Box display="flex" alignItems="baseline">
@@ -35,7 +29,7 @@ export function Publication({ userName, userImage, description, postImage }) {
                     </Text>
                 </Box>
                 <Box>
-                    <Text fontSize="sm">Fecha</Text>
+                    <Text fontSize="sm">Data</Text>
                 </Box>
                 <Box display="flex" alignItems="baseline" p="2">
                     {/*<Image src="/Emojis/euforic.svg" width={100} height={100} />
