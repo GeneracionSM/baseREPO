@@ -8,7 +8,7 @@ import {
     Drawer,
     DrawerContent,
     Text,
-    useDisclosure,
+    useDisclosure
 } from "@chakra-ui/react";
 
 import {

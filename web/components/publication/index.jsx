@@ -1,15 +1,14 @@
-import {
-    Box,
-    Avatar,
-    Heading,
-    Text,
-    Divider,
-    Image
-} from "@chakra-ui/react";
+import { Box, Avatar, Heading, Text, Divider, Image } from "@chakra-ui/react";
 
 export function Publication({ userName, userImage, description, postImage }) {
     return (
-        <Box minW="xl" borderWidth="1px" borderRadius="lg" overflow="hidden" mt={5}>
+        <Box
+            minW="xl"
+            borderWidth="1px"
+            borderRadius="lg"
+            overflow="hidden"
+            mt={5}
+        >
             <Box p="2" display="flex" alignItems="center">
                 <Avatar src={userImage} size="sm" />
                 <Heading as="h6" size="xs" p="2">
@@ -17,7 +16,12 @@ export function Publication({ userName, userImage, description, postImage }) {
                 </Heading>
             </Box>
 
-            <Image src={postImage} alt="publication" width={"100%"} height={"100%"}  />
+            <Image
+                src={postImage}
+                alt="publication"
+                width={"100%"}
+                height={"100%"}
+            />
 
             <Box p="6">
                 <Box display="flex" alignItems="baseline">

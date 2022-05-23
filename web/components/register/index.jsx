@@ -23,7 +23,7 @@ export function Register() {
 
     return (
         <Flex align={"center"} justify={"center"}>
-            <Stack spacing={8} mx={"auto"} maxW={"lg"} >
+            <Stack spacing={8} mx={"auto"} maxW={"lg"}>
                 <Stack align={"center"}>
                     <Heading fontSize={"4xl"} textAlign={"center"}>
                         Crea el teu compte
@@ -106,11 +106,13 @@ export function Register() {
                                 Registrar
                             </Button>
                         </Stack>
-                        <Divider/>
+                        <Divider />
                         <Stack pt={6}>
                             <Text align={"center"}>
                                 Ja ets usuari?{" "}
-                                <Link href="/" color={"blue.400"}>Iniciar sessió</Link>
+                                <Link href="/" color={"blue.400"}>
+                                    Iniciar sessió
+                                </Link>
                             </Text>
                         </Stack>
                     </Stack>

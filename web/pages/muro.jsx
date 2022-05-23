@@ -13,7 +13,7 @@ export default function Index() {
                     <LeftBar />
                 </Box>
                 <Box w="60%">
-                    <PublicationList/>
+                    <PublicationList />
                 </Box>
                 <Box w="20%">
                     <RightBar />

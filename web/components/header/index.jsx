@@ -9,22 +9,27 @@ import {
     MenuList,
     MenuItem,
     MenuDivider,
-    useDisclosure,
     Stack,
-    useColorMode,
     Center
 } from "@chakra-ui/react";
 
 export function Header() {
     return (
         <>
-            <Box bgGradient={'linear(to-r,#FF0080, #E5256E, #ba327a, #A7377F)'} color={'white'} px={4} sx={{ position: '-webkit-sticky', /* Safari */ position: 'sticky', top: '0', }}>
+            <Box
+                bgGradient={"linear(to-r,#FF0080, #E5256E, #ba327a, #A7377F)"}
+                color={"white"}
+                px={4}
+                sx={{
+                    position: "-webkit-sticky",
+                    /* Safari */ position: "sticky",
+                    top: "0"
+                }}
+            >
                 <Flex
-                    
                     h={16}
                     alignItems={"center"}
                     justifyContent={"space-between"}
-                    
                 >
                     <Box>Generació SM</Box>
 
@@ -45,7 +50,7 @@ export function Header() {
                                         }
                                     />
                                 </MenuButton>
-                                <MenuList alignItems={"center"} color={'black'}>
+                                <MenuList alignItems={"center"} color={"black"}>
                                     <br />
                                     <Center>
                                         <Avatar
@@ -64,9 +69,7 @@ export function Header() {
                                     <MenuItem>Perfil</MenuItem>
                                     <MenuItem>Historial d'emocions</MenuItem>
                                     <MenuItem>
-                                            <Link href="/">
-                                                Sortir
-                                            </Link>
+                                        <Link href="/">Sortir</Link>
                                     </MenuItem>
                                 </MenuList>
                             </Menu>
