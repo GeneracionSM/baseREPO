@@ -3,10 +3,12 @@ import { Header } from "../components/header";
 import { RightBar } from "../components/rightBar";
 import { PublicationList } from "../components/publication_list";
 import { LeftBar } from "../components/leftBar";
+import { PopUpWelcome } from "../components/popup_welcome";
 
-export default function Index() {
+export default function Muro() {
     return (
         <>
+            {/* <PopUpWelcome /> */}
             <Header />
             <Flex>
                 <Box flex="20%">
