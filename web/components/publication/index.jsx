@@ -1,4 +1,5 @@
 import { Box, Avatar, Heading, Text, Divider, Image } from "@chakra-ui/react";
+import { Emotions } from "../emotions";
 
 export function Publication({ userName, userImage, description, postImage }) {
     return (
@@ -35,15 +36,8 @@ export function Publication({ userName, userImage, description, postImage }) {
                 <Box>
                     <Text fontSize="sm">Data</Text>
                 </Box>
-                <Box display="flex" alignItems="baseline" p="2">
-                    {/*<Image src="/Emojis/euforic.svg" width={100} height={100} />
-                    <Emotion src="/Emojis/euforic.svg" />
-                    <Emotion src="/Emojis/content.svg" />
-                    <Emotion src="/Emojis/sorpres.svg" />
-                    <Emotion src="/Emojis/trist.svg" />
-    <Emotion src="/Emojis/enfadat.svg" />*/}
-                </Box>
                 <Divider orientation="horizontal" variant="solid" />
+                <Emotions />
             </Box>
         </Box>
     );
