@@ -28,7 +28,7 @@ Aquestes persones també poden entrar en contacte amb els/les usuaris/àries per
     - Il·lusionat/a
     - ...
 
--  Cada setmana, durant tota la setmana, en entrar, apareix un missatge de salut mental psicoeducatiu i antiestigma, de tal manera que apareix com si fos un pop-up i es manté sempre visible a la interfície. El contingut està generat pel perfil professional.
+-  Cada vegada en entrar, apareix un missatge de salut mental psicoeducatiu i antiestigma (el mateix per a tots els usuaris), de tal manera que apareix com si fos un pop-up i es manté sempre visible a la interfície. El missatge estarà present durant un temps, abans de canviar-se per un altre. El contingut està generat pel perfil professional.
 - Quan se surt, també demana l’estat de l’usuari.
 - Cada cosa que es publica ha de dur necessàriament l’etiquetatge vinculat a una emoció.
 - Idea de poder “modificar” l’algoritme, per tal que quan s’etiquetin emocions desagradables, enlloc de suggerir publicacions de categoria similar, suggereixi l’oposada i s’intenti “positivar” l’estat d’ànim.
