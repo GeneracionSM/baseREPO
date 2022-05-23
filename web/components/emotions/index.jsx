@@ -1,8 +1,8 @@
-import { Stack, IconButton, Box, Flex, Image } from "@chakra-ui/react";
+import { Flex, Image } from "@chakra-ui/react";
 
 export function Emotions({}) {
     return (
-        <Stack direction="row" padding={4} spacing="8px">
+        <Flex padding={4} justifyContent={"space-between"}>
             <Image
                 boxSize="40px"
                 src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/325/grinning-face-with-big-eyes_1f603.png"
@@ -43,6 +43,6 @@ export function Emotions({}) {
                 boxSize="40px"
                 src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/72/apple/325/crying-face_1f622.png"
             />
-        </Stack>
+        </Flex>
     );
 }

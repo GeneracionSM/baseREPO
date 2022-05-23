@@ -1,5 +1,6 @@
-import { Box, Avatar, Heading, Text, Divider, Image } from "@chakra-ui/react";
+import { Box, Heading, Text, Divider, Image } from "@chakra-ui/react";
 import { Emotions } from "../emotions";
+import { Avatar } from "../avatar";
 
 export function Publication({ userName, userImage, description, postImage }) {
     return (
@@ -11,11 +12,13 @@ export function Publication({ userName, userImage, description, postImage }) {
             mt={5}
         >
             <Box p="2" display="flex" alignItems="center">
-                <Avatar src={userImage} size="sm" />
+                <Avatar src="https://bit.ly/dan-abramov" size="sm" />
                 <Heading as="h6" size="xs" p="2">
                     {userName}
                 </Heading>
             </Box>
+
+            <Divider />
 
             <Image
                 src={postImage}

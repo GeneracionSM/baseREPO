@@ -132,6 +132,7 @@ const NavItem = ({ link, icon, children, ...rest }) => {
 const MobileNav = ({ onOpen, ...rest }) => {
     return (
         <Flex
+            
             ml={{ base: 0, md: 60 }}
             px={{ base: 4, md: 24 }}
             height="20"

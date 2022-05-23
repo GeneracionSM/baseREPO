@@ -97,10 +97,10 @@ export function Register() {
                             <Button
                                 loadingText="Submitting"
                                 size="lg"
-                                bg={"blue.400"}
+                                bg={"#d72a73"}
                                 color={"white"}
                                 _hover={{
-                                    bg: "blue.500"
+                                    bg: "#a32057"
                                 }}
                             >
                                 Registrar
