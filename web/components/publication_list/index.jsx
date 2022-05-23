@@ -6,19 +6,19 @@ const publications = [
         userName: "Maria",
         userImage: "https://bit.ly/broken-link",
         description: "Avui em sento bé!",
-        postImage: "http://img.desmotivaciones.es/201108/jj_64.jpg"
+        postImage: "https://i.imgur.com/AmkKjFI.jpeg"
     },
     {
-        userName: "Kieran",
+        userName: "Paula",
         userImage: "https://bit.ly/broken-link",
-        description: "Quina llibertat!",
-        postImage: "http://img.desmotivaciones.es/201108/lafelicidad_17.jpg"
+        description: "Avui estic inspirada!",
+        postImage: "https://i.imgur.com/4rvkXor.jpeg"
     },
     {
-        userName: "Jorge Grande",
+        userName: "Jorge",
         userImage: "https://bit.ly/broken-link",
         description: "Quina llibertat!",
-        postImage: "http://img.desmotivaciones.es/201108/lafelicidad_17.jpg"
+        postImage: "https://i.imgur.com/nlBXQxT.jpeg"
     }
 ];
 
