@@ -1,6 +1,6 @@
 import { Flex, Image } from "@chakra-ui/react";
 
-export function Emotions({}) {
+export function Emotions() {
     return (
         <Flex padding={4} justifyContent={"space-between"}>
             <Image

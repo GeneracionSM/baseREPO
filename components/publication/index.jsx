@@ -2,7 +2,7 @@ import { Box, Heading, Text, Divider, Image } from "@chakra-ui/react";
 import { Emotions } from "../emotions";
 import { Avatar } from "../avatar";
 
-export function Publication({ userName, userImage, description, postImage }) {
+export function Publication({ userName, description, postImage }) {
     return (
         <Box
             minW="xl"

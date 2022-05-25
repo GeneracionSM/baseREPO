@@ -22,7 +22,6 @@ export function Header() {
                 px={4}
                 sx={{
                     position: "-webkit-sticky",
-                    /* Safari */ position: "sticky",
                     top: "0"
                 }}
             >

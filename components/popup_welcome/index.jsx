@@ -1,7 +1,6 @@
 import {
     Center,
     Modal,
-    ModalOverlay,
     ModalContent,
     ModalHeader,
     ModalFooter,
@@ -9,19 +8,10 @@ import {
     ModalCloseButton,
     useDisclosure
 } from "@chakra-ui/react";
-import executeQuery from "../../lib/db";
 import Emotions from "../emotions";
-import { useState } from "react";
 
 export function PopUpWelcome() {
-    const Overlay = () => (
-        <ModalOverlay
-            bg="blackAlpha.300"
-            backdropFilter="blur(20px) hue-rotate(90deg)"
-        />
-    );
-
-    const { isOpen, onOpen, onClose } = useDisclosure();
+    const { onClose } = useDisclosure();
 
     return (
         <>
@@ -45,15 +35,4 @@ export function PopUpWelcome() {
             </Modal>
         </>
     );
-}
-
-export async function getEmotions() {
-    try {
-        const result = await executeQuery({
-            query: "SELECT imagen FROM emocion",
-            values: []
-        });
-    } catch (error) {
-        console.log(error);
-    }
 }

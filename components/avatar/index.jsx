@@ -1,6 +1,6 @@
 import { Image } from "@chakra-ui/react";
 
-export function Avatar({ src }) {
+export function Avatar() {
     return (
         <Image
             borderRadius="full"

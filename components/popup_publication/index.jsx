@@ -5,10 +5,13 @@ import {
     ModalHeader,
     ModalContent,
     ModalCloseButton,
+    ModalFooter,
     ModalBody,
     Flex,
-    Spacer
+    Spacer,
+    Input
 } from "@chakra-ui/react";
+import { useDisclosure } from "react";
 
 export function PopUpPublication() {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -26,8 +29,8 @@ export function PopUpPublication() {
                         <Flex direction="column">
                             <Button
                                 variant="outline"
-                                leftIcon={<i class="fa-solid fa-paperclip"></i>}
-                                onClick={() =>
+                                leftIcon={<i className="fa-solid fa-paperclip"></i>}
+                                /*onClick={() =>
                                     selectFiles(
                                         { accept: "image/*" },
                                         ({ name, size, source, file }) => {
@@ -39,7 +42,7 @@ export function PopUpPublication() {
                                             });
                                         }
                                     )
-                                }
+                                }*/
                             >
                                 Seleccionar arxiu
                             </Button>
