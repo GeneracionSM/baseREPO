@@ -58,3 +58,6 @@ npm run dev -ws # in root
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+# Mockup Figma
+[https://www.figma.com/file/EKAU4E2D1MQjp39pob8Yft/HackatonSM?node-id=0%3A1]

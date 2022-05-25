@@ -1,3 +1,15 @@
+import {
+    Button,
+    Modal,
+    ModalOverlay,
+    ModalHeader,
+    ModalContent,
+    ModalCloseButton,
+    ModalBody,
+    Flex,
+    Spacer
+} from "@chakra-ui/react";
+
 export function PopUpPublication() {
     const { isOpen, onOpen, onClose } = useDisclosure();
 

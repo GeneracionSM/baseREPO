@@ -1,9 +1,8 @@
-import { Flex, Box, Center, Square, Text } from "@chakra-ui/react";
+import { Flex, Box } from "@chakra-ui/react";
 import { Header } from "../components/header";
 import { RightBar } from "../components/rightBar";
 import { PublicationList } from "../components/publication_list";
 import { LeftBar } from "../components/leftBar";
-import { PopUpWelcome } from "../components/popup_welcome";
 
 export default function Muro() {
     return (

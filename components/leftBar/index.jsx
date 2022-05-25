@@ -10,7 +10,6 @@ import {
     Text,
     useDisclosure
 } from "@chakra-ui/react";
-
 import {
     FiHome,
     FiCompass,
@@ -18,7 +17,6 @@ import {
     FiMenu,
     FiSearch
 } from "react-icons/fi";
-
 import Link from "next/link";
 
 const LinkItems = [
@@ -132,7 +130,6 @@ const NavItem = ({ link, icon, children, ...rest }) => {
 const MobileNav = ({ onOpen, ...rest }) => {
     return (
         <Flex
-            
             ml={{ base: 0, md: 60 }}
             px={{ base: 4, md: 24 }}
             height="20"

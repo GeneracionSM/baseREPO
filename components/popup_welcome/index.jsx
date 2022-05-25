@@ -9,7 +9,7 @@ import {
     ModalCloseButton,
     useDisclosure
 } from "@chakra-ui/react";
-import executeQuery from "../../../lib/db";
+import executeQuery from "../../lib/db";
 import Emotions from "../emotions";
 import { useState } from "react";
 

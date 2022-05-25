@@ -16,7 +16,6 @@ import {
     Divider
 } from "@chakra-ui/react";
 import { useState } from "react";
-/* import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons"; */
 
 export function Register() {
     const [showPassword, setShowPassword] = useState(false);
@@ -84,11 +83,6 @@ export function Register() {
                                             )
                                         }
                                     >
-                                        {/* {showPassword ? (
-                                            <ViewIcon />
-                                        ) : (
-                                            <ViewOffIcon />
-                                        )} */}
                                     </Button>
                                 </InputRightElement>
                             </InputGroup>

@@ -31,7 +31,9 @@ export function Header() {
                     alignItems={"center"}
                     justifyContent={"space-between"}
                 >
-                    <Box><Link href="/muro">Generació SM</Link></Box>
+                    <Box>
+                        <Link href="/muro">Generació SM</Link>
+                    </Box>
 
                     <Flex alignItems={"center"}>
                         <Stack direction={"row"} spacing={7}>
@@ -66,9 +68,13 @@ export function Header() {
                                     </Center>
                                     <br />
                                     <MenuDivider />
-                                    <MenuItem><Link href="/perfil">Perfil</Link></MenuItem>
+                                    <MenuItem>
+                                        <Link href="/perfil">Perfil</Link>
+                                    </MenuItem>
                                     <MenuItem>Historial d'emocions</MenuItem>
-                                    <MenuItem><Link href="/">Sortir</Link></MenuItem>
+                                    <MenuItem>
+                                        <Link href="/">Sortir</Link>
+                                    </MenuItem>
                                 </MenuList>
                             </Menu>
                         </Stack>
