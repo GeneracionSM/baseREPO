@@ -13,9 +13,21 @@ import {
     Center
 } from "@chakra-ui/react";
 
+const DailyQuotes = [
+    "La innovación distingue al líder del seguidor - Steve Jobs",
+    "Si puedes soñarlo, puedes hacerlo - Walt Disney",
+    "El secreto para salir adelante es comenzar - Mark Twain",
+    "Sé valiente. Toma riesgos. Nada puede sustituir la experiencia - Paulo Coelho",
+    "No hay nada más importante que la capacidad de pensar y actuar - William James",
+    "La vida es una serie de acontecimientos que no debemos esperar a que nos den la oportunidad de actuar - Charles R. Swindoll"
+];
+
+
+
 export function Header() {
     return (
         <>
+            
             <Box
                 bgGradient={"linear(to-r,#FF0080, #E5256E, #ba327a, #A7377F)"}
                 color={"white"}
@@ -34,7 +46,10 @@ export function Header() {
                     <Box>
                         <Link href="/muro">Generació SM</Link>
                     </Box>
-
+                    
+                    <Box className="frasemotivadora">
+                            {DailyQuotes[0]}
+                    </Box>
                     <Flex alignItems={"center"}>
                         <Stack direction={"row"} spacing={7}>
                             <Menu>

@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Caveat';
+    src: local('Caveat'), url(../src/fonts/Caveat/Caveat-Regular.ttf) format('truetype');
+  }
+
+.frasemotivadora{
+    font-family: 'Caveat';
+    font-size: 1.6em;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+}
