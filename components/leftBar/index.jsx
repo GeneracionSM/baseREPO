@@ -15,7 +15,8 @@ import {
     FiCompass,
     FiSettings,
     FiMenu,
-    FiSearch
+    FiSearch,
+    FiPlusSquare
 } from "react-icons/fi";
 import Link from "next/link";
 
@@ -23,6 +24,7 @@ const LinkItems = [
     { name: "Inici", icon: FiHome, link: "/muro" },
     { name: "Cercar", icon: FiSearch, link: "/search" },
     { name: "Emocions", icon: FiCompass, link: "/emocions" },
+    { name: "Crear publicació", icon: FiPlusSquare, link: "/upload" },
     { name: "Preferències", icon: FiSettings, link: "/settings" }
 ];
 
